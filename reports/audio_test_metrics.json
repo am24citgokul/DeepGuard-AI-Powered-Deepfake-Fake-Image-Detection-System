@@ -1,0 +1,53 @@
+{
+  "accuracy": 0.9847457627118644,
+  "precision": 0.9942396313364056,
+  "recall": 0.9751412429378531,
+  "f1": 0.9845978322875071,
+  "real_recall": 0.9943502824858758,
+  "fake_recall": 0.9751412429378531,
+  "specificity": 0.9943502824858758,
+  "fpr": 0.005649717514124294,
+  "fnr": 0.024858757062146894,
+  "roc_auc": 0.9964837690318873,
+  "pr_auc": 0.9973854766663918,
+  "confusion_matrix": {
+    "tn": 1760,
+    "fp": 10,
+    "fn": 44,
+    "tp": 1726,
+    "matrix": [
+      [
+        1760,
+        10
+      ],
+      [
+        44,
+        1726
+      ]
+    ]
+  },
+  "baseline_cnn": {
+    "accuracy": 0.9847457627118644,
+    "precision": 0.9942396313364056,
+    "fake_recall": 0.9751412429378531,
+    "real_recall": 0.9943502824858758,
+    "f1": 0.9845978322875071,
+    "roc_auc": 0.9964837690318873,
+    "fpr": 0.005649717514124294,
+    "fnr": 0.024858757062146894,
+    "threshold": 0.5,
+    "checkpoint": "E:\\ADL_PROJECT\\checkpoints\\audio\\baseline_cnn_best.pt"
+  },
+  "robustness": [
+    {"condition": "Clean audio", "f1": 0.9846, "fake_recall": 0.9751, "real_recall": 0.9944, "status": "OPTIMAL", "warning": null},
+    {"condition": "30 dB noise", "f1": 0.9632, "fake_recall": 0.9345, "real_recall": 0.9912, "status": "GOOD", "warning": null},
+    {"condition": "20 dB noise", "f1": 0.8124, "fake_recall": 0.7015, "real_recall": 0.9820, "status": "MODERATE_DEGRADATION", "warning": null},
+    {"condition": "15 dB noise", "f1": 0.0398, "fake_recall": 0.0203, "real_recall": 0.9977, "status": "SEVERE_FAILURE", "warning": "ROBUSTNESS WARNING: Severe degradation under 15dB noise. High false authentic rate on noisy synthetic speech."},
+    {"condition": "10 dB noise", "f1": 0.0068, "fake_recall": 0.0034, "real_recall": 0.9994, "status": "SEVERE_FAILURE", "warning": "ROBUSTNESS WARNING: Model cannot distinguish synthetic audio under 10dB noise."},
+    {"condition": "Volume -3 dB", "f1": 0.9782, "fake_recall": 0.9620, "real_recall": 0.9930, "status": "GOOD", "warning": null},
+    {"condition": "Volume +3 dB", "f1": 0.9745, "fake_recall": 0.9580, "real_recall": 0.9915, "status": "GOOD", "warning": null},
+    {"condition": "Low-pass filtered (<4kHz)", "f1": 0.8410, "fake_recall": 0.7430, "real_recall": 0.9840, "status": "MODERATE_DEGRADATION", "warning": "ROBUSTNESS WARNING: High frequency audio cutoff degrades fake detection recall."},
+    {"condition": "8kHz -> 16kHz resampled", "f1": 0.8850, "fake_recall": 0.8120, "real_recall": 0.9870, "status": "MODERATE_DEGRADATION", "warning": null}
+  ],
+  "robustness_warning": "ROBUSTNESS WARNING: Baseline CNN exhibits severe degradation under additive noise <= 15 dB SNR (Fake recall drops to 2.03%). Decision-support screening must require review on noisy recordings."
+}

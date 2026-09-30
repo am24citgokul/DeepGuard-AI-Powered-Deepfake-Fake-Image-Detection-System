@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}System Settings — DeepGuard X{% endblock %}
+{% block breadcrumb %}System / Settings{% endblock %}
+{% block header_title %}System Settings & Calibration{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+
+  <!-- Header Banner -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+    <div>
+      <h2 class="text-2xl font-black tracking-tight text-white">
+        System Configuration & Model Parameters
+      </h2>
+      <p class="text-sm text-gray-400 mt-1">
+        Configure decision threshold gates, ELA compression multipliers, and pipeline hardware acceleration parameters.
+      </p>
+    </div>
+
+    <div>
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-400 border border-cyan-500/20">
+        Engine: PyTorch CUDA / CPU
+      </span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- Decision Thresholds Card -->
+    <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-4">
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+          <svg class="h-4 w-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20v-6M6 20V10M18 20V4"/>
+          </svg>
+          Decision Boundary Thresholds
+        </h3>
+        <span class="text-[10px] font-mono text-cyan-400">Calibration</span>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <div>
+          <div class="flex justify-between mb-1.5">
+            <label class="font-bold text-gray-300">Uncertainty Rejection Threshold</label>
+            <span class="font-mono text-cyan-400 font-bold">60.0%</span>
+          </div>
+          <p class="text-gray-400 text-[11px] mb-2">Predictions below this value are marked UNCERTAIN to enforce human-in-the-loop review.</p>
+          <div class="h-2 w-full rounded-full bg-gray-800 overflow-hidden">
+            <div class="h-full bg-cyan-500 rounded-full" style="width: 60%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between mb-1.5">
+            <label class="font-bold text-gray-300">Webcam Low-Confidence Floor</label>
+            <span class="font-mono text-amber-400 font-bold">40.0%</span>
+          </div>
+          <p class="text-gray-400 text-[11px] mb-2">Frames below 40% confidence trigger 'CANNOT ASSESS' to prevent false positive alerts on bad lighting.</p>
+          <div class="h-2 w-full rounded-full bg-gray-800 overflow-hidden">
+            <div class="h-full bg-amber-500 rounded-full" style="width: 40%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forensic Analysis Hyperparameters -->
+    <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-4">
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+          <svg class="h-4 w-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          Forensics Hyperparameters
+        </h3>
+        <span class="text-[10px] font-mono text-blue-400">Signal Parameters</span>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div class="flex items-center justify-between p-2.5 rounded-lg bg-gray-800/40 border border-gray-800">
+          <span class="text-gray-400">ELA Quality Resave Setting:</span>
+          <span class="font-mono text-white font-semibold">Q = 90</span>
+        </div>
+        <div class="flex items-center justify-between p-2.5 rounded-lg bg-gray-800/40 border border-gray-800">
+          <span class="text-gray-400">ELA Contrast Scale Multiplier:</span>
+          <span class="font-mono text-white font-semibold">15.0x</span>
+        </div>
+        <div class="flex items-center justify-between p-2.5 rounded-lg bg-gray-800/40 border border-gray-800">
+          <span class="text-gray-400">Audio Sample Rate:</span>
+          <span class="font-mono text-white font-semibold">16,000 Hz</span>
+        </div>
+        <div class="flex items-center justify-between p-2.5 rounded-lg bg-gray-800/40 border border-gray-800">
+          <span class="text-gray-400">Video Stride Sampling:</span>
+          <span class="font-mono text-white font-semibold">6 Frames Aggregated</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

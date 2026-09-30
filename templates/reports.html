@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% block title %}Screening Reports — DeepGuard X{% endblock %}
+{% block breadcrumb %}Evidence / Reports{% endblock %}
+{% block header_title %}Screening Reports & Audit History{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+
+  <!-- Page Header -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+    <div>
+      <h2 class="text-2xl font-black tracking-tight text-white">
+        Screening Reports Audit Log
+      </h2>
+      <p class="text-sm text-gray-400 mt-1">
+        Chronological audit history of forensic reports generated across image, video, audio, and multimodal screening sessions.
+      </p>
+    </div>
+
+    <div>
+      <a
+        href="/full-screening"
+        class="inline-flex items-center gap-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 px-4 py-2.5 text-xs font-bold text-white shadow-lg shadow-cyan-600/20 transition-all"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+        <span>New Screening</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Reports Table Container -->
+  <div class="dg-glass-card rounded-2xl border border-gray-800 bg-gray-900/90 overflow-hidden shadow-xl">
+    <div class="p-5 border-b border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider">Historical Audit Logs</h3>
+      </div>
+      <span class="text-xs font-mono text-gray-400">
+        {{ reports|length if reports else 0 }} Reports Recorded
+      </span>
+    </div>
+
+    {% if reports and reports|length > 0 %}
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-xs">
+        <thead class="bg-gray-950/60 text-gray-400 border-b border-gray-800 uppercase font-mono tracking-wider">
+          <tr>
+            <th class="px-5 py-3.5">Date / Time</th>
+            <th class="px-5 py-3.5">Input Artifact</th>
+            <th class="px-5 py-3.5">Type</th>
+            <th class="px-5 py-3.5">Prediction</th>
+            <th class="px-5 py-3.5">Confidence</th>
+            <th class="px-5 py-3.5">Risk Level</th>
+            <th class="px-5 py-3.5">Model</th>
+            <th class="px-5 py-3.5 text-right">Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-800/80 text-gray-300">
+          {% for r in reports %}
+          <tr class="hover:bg-gray-800/40 transition-colors">
+            <!-- Timestamp -->
+            <td class="px-5 py-4 font-mono text-gray-400 whitespace-nowrap">
+              {{ r.timestamp or 'Recent' }}
+            </td>
+            <!-- Filename -->
+            <td class="px-5 py-4 font-semibold text-white max-w-[200px] truncate" title="{{ r.filename }}">
+              {{ r.filename }}
+            </td>
+            <!-- Modality Type -->
+            <td class="px-5 py-4 whitespace-nowrap">
+              <span class="rounded bg-gray-800 px-2 py-0.5 text-[11px] font-mono text-gray-300 border border-gray-700">
+                {{ r.type }}
+              </span>
+            </td>
+            <!-- Prediction -->
+            <td class="px-5 py-4 whitespace-nowrap font-medium text-white">
+              {{ r.prediction }}
+            </td>
+            <!-- Confidence -->
+            <td class="px-5 py-4 whitespace-nowrap font-mono font-bold text-white">
+              {{ r.confidence }}
+            </td>
+            <!-- Risk Badge -->
+            <td class="px-5 py-4 whitespace-nowrap">
+              {% if r.risk == 'TRUSTED' or r.risk == 'AUTHENTIC' %}
+                <span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-bold text-emerald-400 border border-emerald-500/30">
+                  TRUSTED
+                </span>
+              {% elif r.risk == 'HIGH RISK' or r.risk == 'MANIPULATED' %}
+                <span class="inline-flex items-center gap-1 rounded-full bg-rose-500/10 px-2.5 py-0.5 text-[10px] font-bold text-rose-400 border border-rose-500/30">
+                  HIGH RISK
+                </span>
+              {% else %}
+                <span class="inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-0.5 text-[10px] font-bold text-amber-400 border border-amber-500/30">
+                  REVIEW
+                </span>
+              {% endif %}
+            </td>
+            <!-- Model -->
+            <td class="px-5 py-4 whitespace-nowrap font-mono text-xs text-gray-400">
+              {{ r.model }}
+            </td>
+            <!-- Action -->
+            <td class="px-5 py-4 whitespace-nowrap text-right">
+              {% if r.url %}
+              <a
+                href="{{ r.url }}"
+                target="_blank"
+                class="inline-flex items-center gap-1 rounded-lg bg-gray-800 hover:bg-cyan-600 hover:text-white px-2.5 py-1 text-xs font-semibold text-cyan-400 border border-gray-700 transition-colors"
+              >
+                <span>View</span>
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+              {% else %}
+              <span class="text-gray-500 text-xs">Logged</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <!-- Clean Empty State (Prompt Section 16 Requirement) -->
+    <div class="p-12 text-center flex flex-col items-center justify-center">
+      <div class="h-16 w-16 rounded-2xl bg-gray-800/80 text-gray-400 flex items-center justify-center mb-4 border border-gray-700">
+        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+      </div>
+      <h4 class="text-base font-bold text-white">No Screening Reports Available Yet</h4>
+      <p class="text-xs text-gray-400 max-w-sm mt-1.5 leading-relaxed">
+        Run an image, video, audio, or full multimodal screening to generate your first auditable forensic report.
+      </p>
+      <div class="mt-5">
+        <a
+          href="/test-image"
+          class="inline-flex items-center gap-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 px-4 py-2 text-xs font-bold text-white transition-all shadow-md"
+        >
+          <span>Run Test Image</span>
+        </a>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+</div>
+{% endblock %}

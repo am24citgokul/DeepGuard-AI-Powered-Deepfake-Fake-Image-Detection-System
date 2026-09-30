@@ -1,0 +1,152 @@
+/* DeepGuard X — Enterprise AI Authenticity & Forensics Design System */
+
+:root {
+  --dg-navy-950: #070d17;
+  --dg-navy-900: #0b1329;
+  --dg-navy-800: #111e38;
+  --dg-navy-700: #1b2d52;
+  --dg-border: #1e293b;
+  --dg-cyan: #38bdf8;
+  --dg-cyan-glow: rgba(56, 189, 248, 0.25);
+  --dg-emerald: #10b981;
+  --dg-emerald-glow: rgba(16, 185, 129, 0.2);
+  --dg-amber: #f59e0b;
+  --dg-amber-glow: rgba(245, 158, 11, 0.2);
+  --dg-rose: #f43f5e;
+  --dg-rose-glow: rgba(244, 63, 94, 0.25);
+}
+
+/* Glassmorphism & Cyber Card Effects */
+.dg-glass-card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+}
+
+.dg-glass-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scan Line Animation for Live Analysis */
+@keyframes cyberScan {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.2;
+  }
+}
+
+.cyber-scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+  box-shadow: 0 0 12px #38bdf8, 0 0 24px #38bdf8;
+  animation: cyberScan 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Radar Pulse Effect */
+@keyframes radarPing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.radar-ping {
+  animation: radarPing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Risk Badges */
+.badge-trusted {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+}
+
+.badge-review {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+}
+
+.badge-risk {
+  background-color: rgba(244, 63, 94, 0.12);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.15);
+}
+
+/* Dropzone Styling */
+.dg-dropzone {
+  border: 2px dashed rgba(71, 85, 105, 0.8);
+  border-radius: 0.75rem;
+  background-color: rgba(15, 23, 42, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.dg-dropzone:hover,
+.dg-dropzone.drag-active {
+  border-color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.05);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+/* Progress Fill Bar */
+.progress-fill {
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Grid Pattern Background */
+.bg-grid-cyber {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Console Code Block */
+.dg-code-terminal {
+  background: #090e17;
+  border: 1px solid #1e293b;
+  border-radius: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar for sidebar and reports */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1329;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

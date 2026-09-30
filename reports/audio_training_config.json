@@ -1,0 +1,24 @@
+{
+  "python_version": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "pytorch_version": "2.11.0+cu128",
+  "cuda_version": "12.8",
+  "gpu_device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "random_seed": 42,
+  "dataset_manifest_path": "E:\\DEEPFAKE\\MASTER_DATASET\\MANIFESTS\\audio_train.csv",
+  "target_samples": 64000,
+  "sample_rate": 16000,
+  "batch_size": 64,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "optimizer": "AdamW",
+  "scheduler": "ReduceLROnPlateau(mode='max', factor=0.5, patience=1)",
+  "loss_function": "BCEWithLogitsLoss",
+  "frozen_operating_threshold": 0.3,
+  "brier_score_val": 0.0152,
+  "ece_val": 0.0079,
+  "checkpoints": {
+    "baseline_cnn": "E:\\DEEPFAKE\\checkpoints\\audio\\baseline_cnn_best.pt",
+    "aasist": "E:\\DEEPFAKE\\checkpoints\\audio\\aasist_best.pt",
+    "primary_best_val_f1": "E:\\DEEPFAKE\\checkpoints\\audio\\audio_best_val_f1.pt"
+  }
+}

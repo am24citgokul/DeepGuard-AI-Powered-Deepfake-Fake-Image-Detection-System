@@ -1,0 +1,5 @@
+filename,filepath,binary_label,true_label
+Screenshot 2026-09-18 205727.png,E:\ADL_PROJECT\test_samples\Screenshot 2026-09-18 205727.png,1,Fake
+Screenshot 2026-09-18 205733.png,E:\ADL_PROJECT\test_samples\Screenshot 2026-09-18 205733.png,1,Fake
+WhatsApp Image 2026-01-23 at 10.55.49 AM.jpeg,E:\ADL_PROJECT\test_samples\WhatsApp Image 2026-01-23 at 10.55.49 AM.jpeg,0,Real
+WhatsApp Image1 2026-01-22 at 8.32.52 PM.jpeg,E:\ADL_PROJECT\test_samples\WhatsApp Image1 2026-01-22 at 8.32.52 PM.jpeg,0,Real

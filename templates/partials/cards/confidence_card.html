@@ -1,0 +1,56 @@
+<!-- Confidence Score Visualization Card -->
+{% set score = conf_score if conf_score is defined else (confidence or (result and result.confidence) or 0.0) %}
+{% set pct = "%.1f"|format(score * 100) %}
+
+<div class="rounded-xl border border-gray-800 bg-gray-900/90 p-5">
+  <div class="flex items-center justify-between mb-3">
+    <div>
+      <span class="text-xs font-bold uppercase tracking-wider text-gray-400">
+        {{ label or 'Confidence Level' }}
+      </span>
+      <div class="text-2xl font-black text-white font-mono mt-0.5">
+        {{ pct }}%
+      </div>
+    </div>
+
+    <!-- Confidence Badge Tier -->
+    <div>
+      {% if score >= 0.75 %}
+        <span class="inline-flex items-center rounded-md bg-emerald-500/10 px-2.5 py-1 text-xs font-bold text-emerald-400 border border-emerald-500/30">
+          HIGH CONFIDENCE
+        </span>
+      {% elif score >= 0.50 %}
+        <span class="inline-flex items-center rounded-md bg-amber-500/10 px-2.5 py-1 text-xs font-bold text-amber-400 border border-amber-500/30">
+          MEDIUM CONFIDENCE
+        </span>
+      {% else %}
+        <span class="inline-flex items-center rounded-md bg-gray-700 px-2.5 py-1 text-xs font-bold text-gray-300 border border-gray-600">
+          LOW CONFIDENCE
+        </span>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Progress Bar Bar -->
+  <div class="relative h-2.5 w-full overflow-hidden rounded-full bg-gray-800">
+    <div
+      class="progress-fill h-full rounded-full transition-all duration-700 ease-out
+      {% if score >= 0.75 %}
+        bg-gradient-to-r from-emerald-600 to-emerald-400
+      {% elif score >= 0.50 %}
+        bg-gradient-to-r from-amber-600 to-amber-400
+      {% else %}
+        bg-gradient-to-r from-rose-600 to-rose-400
+      {% endif %}
+      "
+      style="width: {{ pct }}%;"
+      data-width="{{ pct }}%"
+    ></div>
+  </div>
+
+  <div class="mt-2.5 flex items-center justify-between text-[11px] text-gray-500 font-mono">
+    <span>0% (Random Chance)</span>
+    <span>Threshold: 60%</span>
+    <span>100% (Certainty)</span>
+  </div>
+</div>

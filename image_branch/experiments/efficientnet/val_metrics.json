@@ -1,0 +1,37 @@
+{
+  "model": "efficientnet",
+  "checkpoint": "E:\\ADL_PROJECT\\image_branch\\experiments\\efficientnet\\best_model.pth",
+  "best_val_auc": 0.8594723454599231,
+  "selected_threshold_from_val": 0.2,
+  "metrics_at_selected_threshold": {
+    "threshold": 0.2,
+    "accuracy": 0.7422291296625222,
+    "precision": 0.6803577343491223,
+    "real_recall": 0.5718722271517303,
+    "fake_recall": 0.9128888888888889,
+    "specificity": 0.5718722271517303,
+    "fpr": 0.42812777284826975,
+    "fnr": 0.08711111111111111,
+    "f1": 0.7796545834124122,
+    "roc_auc": 0.8594723454599231,
+    "pr_auc": 0.8591573101912533,
+    "brier": 0.1795654296875,
+    "ece": 0.13592814382820742,
+    "confusion_matrix": {
+      "tn": 1289,
+      "fp": 965,
+      "fn": 196,
+      "tp": 2054,
+      "raw": [
+        [
+          1289,
+          965
+        ],
+        [
+          196,
+          2054
+        ]
+      ]
+    }
+  }
+}

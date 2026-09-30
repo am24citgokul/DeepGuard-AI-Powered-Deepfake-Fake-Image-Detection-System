@@ -1,0 +1,381 @@
+{
+  "total_bytes": 4101703462,
+  "total_gb": 3.8200090285390615,
+  "total_files": 30007,
+  "folder_counts": {
+    "FF++C32-Frames\\Deepfakes": 5000,
+    "FF++C32-Frames\\Face2Face": 5000,
+    "FF++C32-Frames\\FaceShifter": 5000,
+    "FF++C32-Frames\\FaceSwap": 5000,
+    "FF++C32-Frames\\NeuralTextures": 5000,
+    "FF++C32-Frames\\Original": 5000,
+    "": 1,
+    "CSVs": 6
+  },
+  "class_counts": {
+    "Deepfakes": 5000,
+    "Face2Face": 5000,
+    "FaceShifter": 5000,
+    "FaceSwap": 5000,
+    "NeuralTextures": 5000,
+    "Original": 5000
+  },
+  "image_formats": {
+    ".jpg": 30000
+  },
+  "resolutions_distribution": {
+    "1280x720": 9750,
+    "640x480": 8620,
+    "1920x1080": 3690,
+    "854x480": 1960,
+    "656x480": 1320,
+    "832x480": 1020,
+    "600x480": 960,
+    "720x480": 540,
+    "576x480": 520,
+    "654x480": 400,
+    "704x480": 280,
+    "960x720": 250,
+    "1440x1080": 90,
+    "848x480": 60,
+    "658x480": 40,
+    "1264x720": 40,
+    "800x480": 40,
+    "598x480": 40,
+    "642x480": 40,
+    "1280x718": 30
+  },
+  "total_resolutions_types": 36,
+  "min_resolution": [
+    256,
+    480
+  ],
+  "max_resolution": [
+    1920,
+    1080
+  ],
+  "corrupted_files_count": 0,
+  "corrupted_files": [],
+  "metadata_info": {
+    "FF++C32-All-frames.csv": {
+      "columns": [
+        "filename",
+        "label",
+        "features",
+        "filepath",
+        "label_id"
+      ],
+      "shape_preview": [
+        5,
+        5
+      ],
+      "head_sample": [
+        {
+          "filename": "276_185_f3.jpg",
+          "label": "FaceSwap",
+          "features": "FaceSwap manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/FaceSwap/276_185_f3.jpg",
+          "label_id": 1
+        },
+        {
+          "filename": "043_110_f1.jpg",
+          "label": "FaceSwap",
+          "features": "FaceSwap manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/FaceSwap/043_110_f1.jpg",
+          "label_id": 1
+        }
+      ]
+    },
+    "CSVs\\Deepfakes.csv": {
+      "columns": [
+        "filename",
+        "label",
+        "features",
+        "filepath",
+        "label_id"
+      ],
+      "shape_preview": [
+        5,
+        5
+      ],
+      "head_sample": [
+        {
+          "filename": "112_892_f0.jpg",
+          "label": "Deepfakes",
+          "features": "Manipulated face, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/Deepfakes/112_892_f0.jpg",
+          "label_id": 2
+        },
+        {
+          "filename": "546_621_f1.jpg",
+          "label": "Deepfakes",
+          "features": "Manipulated face, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/Deepfakes/546_621_f1.jpg",
+          "label_id": 2
+        }
+      ]
+    },
+    "CSVs\\Face2Face.csv": {
+      "columns": [
+        "filename",
+        "label",
+        "features",
+        "filepath",
+        "label_id"
+      ],
+      "shape_preview": [
+        5,
+        5
+      ],
+      "head_sample": [
+        {
+          "filename": "163_031_f0.jpg",
+          "label": "Face2Face",
+          "features": "Face2Face manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/Face2Face/163_031_f0.jpg",
+          "label_id": 3
+        },
+        {
+          "filename": "455_471_f1.jpg",
+          "label": "Face2Face",
+          "features": "Face2Face manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/Face2Face/455_471_f1.jpg",
+          "label_id": 3
+        }
+      ]
+    },
+    "CSVs\\FaceShifter.csv": {
+      "columns": [
+        "filename",
+        "label",
+        "features",
+        "filepath",
+        "label_id"
+      ],
+      "shape_preview": [
+        5,
+        5
+      ],
+      "head_sample": [
+        {
+          "filename": "163_031_f0.jpg",
+          "label": "FaceShifter",
+          "features": "FaceShifter manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/FaceShifter/163_031_f0.jpg",
+          "label_id": 5
+        },
+        {
+          "filename": "455_471_f1.jpg",
+          "label": "FaceShifter",
+          "features": "FaceShifter manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/FaceShifter/455_471_f1.jpg",
+          "label_id": 5
+        }
+      ]
+    },
+    "CSVs\\FaceSwap.csv": {
+      "columns": [
+        "filename",
+        "label",
+        "features",
+        "filepath",
+        "label_id"
+      ],
+      "shape_preview": [
+        5,
+        5
+      ],
+      "head_sample": [
+        {
+          "filename": "276_185_f3.jpg",
+          "label": "FaceSwap",
+          "features": "FaceSwap manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/FaceSwap/276_185_f3.jpg",
+          "label_id": 1
+        },
+        {
+          "filename": "043_110_f1.jpg",
+          "label": "FaceSwap",
+          "features": "FaceSwap manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/FaceSwap/043_110_f1.jpg",
+          "label_id": 1
+        }
+      ]
+    },
+    "CSVs\\NeuralTextures.csv": {
+      "columns": [
+        "filename",
+        "label",
+        "features",
+        "filepath",
+        "label_id"
+      ],
+      "shape_preview": [
+        5,
+        5
+      ],
+      "head_sample": [
+        {
+          "filename": "276_185_f3.jpg",
+          "label": "NeuralTextures",
+          "features": "NeuralTextures manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/NeuralTextures/276_185_f3.jpg",
+          "label_id": 4
+        },
+        {
+          "filename": "043_110_f1.jpg",
+          "label": "NeuralTextures",
+          "features": "NeuralTextures manipulation, synthetic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/NeuralTextures/043_110_f1.jpg",
+          "label_id": 4
+        }
+      ]
+    },
+    "CSVs\\Original.csv": {
+      "columns": [
+        "filename",
+        "label",
+        "features",
+        "filepath",
+        "label_id"
+      ],
+      "shape_preview": [
+        5,
+        5
+      ],
+      "head_sample": [
+        {
+          "filename": "543_f2.jpg",
+          "label": "Original",
+          "features": "Real face, authentic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/Original/543_f2.jpg",
+          "label_id": 0
+        },
+        {
+          "filename": "913_f1.jpg",
+          "label": "Original",
+          "features": "Real face, authentic frame",
+          "filepath": "/kaggle/input/faceforensics-extracted-dataset-c23/FFPPc32_Frames/Original/913_f1.jpg",
+          "label_id": 0
+        }
+      ]
+    }
+  },
+  "duplicate_filenames_count": 5000,
+  "duplicate_filenames_sample": {
+    "000_003_f0.jpg": [
+      "FF++C32-Frames\\Deepfakes\\000_003_f0.jpg",
+      "FF++C32-Frames\\Face2Face\\000_003_f0.jpg",
+      "FF++C32-Frames\\FaceShifter\\000_003_f0.jpg",
+      "FF++C32-Frames\\FaceSwap\\000_003_f0.jpg",
+      "FF++C32-Frames\\NeuralTextures\\000_003_f0.jpg"
+    ],
+    "000_003_f1.jpg": [
+      "FF++C32-Frames\\Deepfakes\\000_003_f1.jpg",
+      "FF++C32-Frames\\Face2Face\\000_003_f1.jpg",
+      "FF++C32-Frames\\FaceShifter\\000_003_f1.jpg",
+      "FF++C32-Frames\\FaceSwap\\000_003_f1.jpg",
+      "FF++C32-Frames\\NeuralTextures\\000_003_f1.jpg"
+    ],
+    "000_003_f2.jpg": [
+      "FF++C32-Frames\\Deepfakes\\000_003_f2.jpg",
+      "FF++C32-Frames\\Face2Face\\000_003_f2.jpg",
+      "FF++C32-Frames\\FaceShifter\\000_003_f2.jpg",
+      "FF++C32-Frames\\FaceSwap\\000_003_f2.jpg",
+      "FF++C32-Frames\\NeuralTextures\\000_003_f2.jpg"
+    ],
+    "000_003_f3.jpg": [
+      "FF++C32-Frames\\Deepfakes\\000_003_f3.jpg",
+      "FF++C32-Frames\\Face2Face\\000_003_f3.jpg",
+      "FF++C32-Frames\\FaceShifter\\000_003_f3.jpg",
+      "FF++C32-Frames\\FaceSwap\\000_003_f3.jpg",
+      "FF++C32-Frames\\NeuralTextures\\000_003_f3.jpg"
+    ],
+    "000_003_f4.jpg": [
+      "FF++C32-Frames\\Deepfakes\\000_003_f4.jpg",
+      "FF++C32-Frames\\Face2Face\\000_003_f4.jpg",
+      "FF++C32-Frames\\FaceShifter\\000_003_f4.jpg",
+      "FF++C32-Frames\\FaceSwap\\000_003_f4.jpg",
+      "FF++C32-Frames\\NeuralTextures\\000_003_f4.jpg"
+    ],
+    "001_870_f0.jpg": [
+      "FF++C32-Frames\\Deepfakes\\001_870_f0.jpg",
+      "FF++C32-Frames\\Face2Face\\001_870_f0.jpg",
+      "FF++C32-Frames\\FaceShifter\\001_870_f0.jpg",
+      "FF++C32-Frames\\FaceSwap\\001_870_f0.jpg",
+      "FF++C32-Frames\\NeuralTextures\\001_870_f0.jpg"
+    ],
+    "001_870_f1.jpg": [
+      "FF++C32-Frames\\Deepfakes\\001_870_f1.jpg",
+      "FF++C32-Frames\\Face2Face\\001_870_f1.jpg",
+      "FF++C32-Frames\\FaceShifter\\001_870_f1.jpg",
+      "FF++C32-Frames\\FaceSwap\\001_870_f1.jpg",
+      "FF++C32-Frames\\NeuralTextures\\001_870_f1.jpg"
+    ],
+    "001_870_f2.jpg": [
+      "FF++C32-Frames\\Deepfakes\\001_870_f2.jpg",
+      "FF++C32-Frames\\Face2Face\\001_870_f2.jpg",
+      "FF++C32-Frames\\FaceShifter\\001_870_f2.jpg",
+      "FF++C32-Frames\\FaceSwap\\001_870_f2.jpg",
+      "FF++C32-Frames\\NeuralTextures\\001_870_f2.jpg"
+    ],
+    "001_870_f3.jpg": [
+      "FF++C32-Frames\\Deepfakes\\001_870_f3.jpg",
+      "FF++C32-Frames\\Face2Face\\001_870_f3.jpg",
+      "FF++C32-Frames\\FaceShifter\\001_870_f3.jpg",
+      "FF++C32-Frames\\FaceSwap\\001_870_f3.jpg",
+      "FF++C32-Frames\\NeuralTextures\\001_870_f3.jpg"
+    ],
+    "001_870_f4.jpg": [
+      "FF++C32-Frames\\Deepfakes\\001_870_f4.jpg",
+      "FF++C32-Frames\\Face2Face\\001_870_f4.jpg",
+      "FF++C32-Frames\\FaceShifter\\001_870_f4.jpg",
+      "FF++C32-Frames\\FaceSwap\\001_870_f4.jpg",
+      "FF++C32-Frames\\NeuralTextures\\001_870_f4.jpg"
+    ]
+  },
+  "sample_filenames": [
+    "000_003_f0.jpg",
+    "000_003_f1.jpg",
+    "000_003_f2.jpg",
+    "000_003_f3.jpg",
+    "000_003_f4.jpg",
+    "001_870_f0.jpg",
+    "001_870_f1.jpg",
+    "001_870_f2.jpg",
+    "001_870_f3.jpg",
+    "001_870_f4.jpg",
+    "002_006_f0.jpg",
+    "002_006_f1.jpg",
+    "002_006_f2.jpg",
+    "002_006_f3.jpg",
+    "002_006_f4.jpg",
+    "003_000_f0.jpg",
+    "003_000_f1.jpg",
+    "003_000_f2.jpg",
+    "003_000_f3.jpg",
+    "003_000_f4.jpg"
+  ],
+  "sample_relative_paths": [
+    "Deepfakes\\000_003_f0.jpg",
+    "Deepfakes\\000_003_f1.jpg",
+    "Deepfakes\\000_003_f2.jpg",
+    "Deepfakes\\000_003_f3.jpg",
+    "Deepfakes\\000_003_f4.jpg",
+    "Deepfakes\\001_870_f0.jpg",
+    "Deepfakes\\001_870_f1.jpg",
+    "Deepfakes\\001_870_f2.jpg",
+    "Deepfakes\\001_870_f3.jpg",
+    "Deepfakes\\001_870_f4.jpg",
+    "Deepfakes\\002_006_f0.jpg",
+    "Deepfakes\\002_006_f1.jpg",
+    "Deepfakes\\002_006_f2.jpg",
+    "Deepfakes\\002_006_f3.jpg",
+    "Deepfakes\\002_006_f4.jpg",
+    "Deepfakes\\003_000_f0.jpg",
+    "Deepfakes\\003_000_f1.jpg",
+    "Deepfakes\\003_000_f2.jpg",
+    "Deepfakes\\003_000_f3.jpg",
+    "Deepfakes\\003_000_f4.jpg"
+  ]
+}

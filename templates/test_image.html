@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+
+{% block title %}Image Analysis — DeepGuard X{% endblock %}
+{% block breadcrumb %}Screening / Image{% endblock %}
+{% block header_title %}Image Authenticity Analysis{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+
+  <!-- Page Header -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+    <div>
+      <h2 class="text-2xl font-black tracking-tight text-white">
+        Facial & Media Image Forensic Screening
+      </h2>
+      <p class="text-sm text-gray-400 mt-1">
+        Evaluates spatial feature distributions with EfficientNet-B0 and generates dual-spectrum explainability evidence (Grad-CAM + ELA).
+      </p>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-400 border border-cyan-500/20">
+        <span class="h-1.5 w-1.5 rounded-full bg-cyan-400"></span> EfficientNet-B0 (C23)
+      </span>
+    </div>
+  </div>
+
+  <!-- Two Column Layout: Left Upload, Right Result -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+    <!-- LEFT COLUMN: Upload Form -->
+    <div class="lg:col-span-5 space-y-4">
+      <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/80">
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+          <svg class="h-4 w-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          Select Target Image
+        </h3>
+
+        <form action="/test-image" method="POST" enctype="multipart/form-data" class="screen-analysis-form space-y-4">
+          <!-- Upload Component -->
+          {% include 'partials/upload/image_upload.html' %}
+
+          <button
+            type="submit"
+            class="w-full flex items-center justify-center gap-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-cyan-600/25 transition-all duration-200"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            <span>Run Image Forensics</span>
+          </button>
+        </form>
+
+        <!-- Technical Specification Note -->
+        <div class="mt-4 pt-4 border-t border-gray-800/80 text-[11px] text-gray-400 space-y-1">
+          <div class="flex justify-between">
+            <span>Input Dimensions:</span>
+            <span class="font-mono text-gray-300">224 x 224 RGB Normalized</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Decision Boundary:</span>
+            <span class="font-mono text-gray-300">60.0% Confidence Threshold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: Analysis Result -->
+    <div class="lg:col-span-7 space-y-4">
+      {% if result %}
+        <div class="dg-glass-card rounded-2xl p-6 sm:p-7 border 
+          {% if result.binary_verdict == 'AUTHENTIC' %}border-emerald-500/40 bg-gradient-to-br from-emerald-950/20 to-gray-900/90
+          {% elif result.binary_verdict == 'MANIPULATED' %}border-rose-500/40 bg-gradient-to-br from-rose-950/20 to-gray-900/90
+          {% else %}border-amber-500/40 bg-gradient-to-br from-amber-950/20 to-gray-900/90{% endif %}
+        ">
+          <!-- Result Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gray-800/80 pb-4">
+            <div>
+              <span class="text-[10px] font-mono font-bold tracking-widest uppercase text-gray-400">
+                INFERENCE OUTCOME
+              </span>
+              <div class="mt-1 flex items-center gap-2">
+                {% if result.binary_verdict == 'AUTHENTIC' %}
+                  <span class="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500/15 px-3 py-1.5 text-base font-black text-emerald-400 border border-emerald-500/40">
+                    AUTHENTIC (REAL)
+                  </span>
+                {% elif result.binary_verdict == 'MANIPULATED' %}
+                  <span class="inline-flex items-center gap-1.5 rounded-lg bg-rose-500/15 px-3 py-1.5 text-base font-black text-rose-400 border border-rose-500/40">
+                    MANIPULATED (SYNTHETIC)
+                  </span>
+                {% else %}
+                  <span class="inline-flex items-center gap-1.5 rounded-lg bg-amber-500/15 px-3 py-1.5 text-base font-black text-amber-400 border border-amber-500/40">
+                    UNCERTAIN / REVIEW
+                  </span>
+                {% endif %}
+              </div>
+            </div>
+
+            <!-- Model Info -->
+            <div class="sm:text-right">
+              <span class="text-[10px] font-mono text-gray-400 uppercase">CLASSIFIER</span>
+              <p class="font-mono text-xs font-bold text-cyan-400">EfficientNet-B0</p>
+            </div>
+          </div>
+
+          <!-- Confidence Progress Card Component -->
+          <div class="mt-5">
+            {% set conf_score = result.confidence %}
+            {% set label = 'Prediction Confidence' %}
+            {% include 'partials/cards/confidence_card.html' %}
+          </div>
+
+          <!-- Metadata Breakdown Grid -->
+          <div class="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+            <div class="rounded-xl bg-gray-800/40 p-3 border border-gray-800">
+              <span class="text-gray-400 block mb-1">Predicted Class</span>
+              <span class="font-mono font-bold text-white">{{ result.prediction }}</span>
+            </div>
+            <div class="rounded-xl bg-gray-800/40 p-3 border border-gray-800">
+              <span class="text-gray-400 block mb-1">Raw Decision</span>
+              <span class="font-mono text-gray-300">{{ result.raw_binary_verdict or result.binary_verdict }}</span>
+            </div>
+            <div class="rounded-xl bg-gray-800/40 p-3 border border-gray-800 col-span-2 sm:col-span-1">
+              <span class="text-gray-400 block mb-1">Uploaded Artifact</span>
+              <span class="font-mono text-gray-300 truncate block" title="{{ filename }}">{{ filename }}</span>
+            </div>
+          </div>
+
+          {% if result.confidence_note %}
+          <div class="mt-4 rounded-lg bg-amber-500/10 border border-amber-500/30 p-3 text-xs text-amber-300">
+            <strong>Note:</strong> {{ result.confidence_note }}
+          </div>
+          {% endif %}
+        </div>
+      {% else %}
+        <!-- Default State when no file analyzed yet -->
+        <div class="dg-glass-card rounded-2xl p-8 border border-gray-800 bg-gray-900/60 text-center flex flex-col items-center justify-center min-h-[300px]">
+          <div class="h-16 w-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4">
+            <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+              <circle cx="9" cy="9" r="2"/>
+              <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+            </svg>
+          </div>
+          <h4 class="text-base font-bold text-white">No Image Evaluated Yet</h4>
+          <p class="text-xs text-gray-400 max-w-sm mt-1.5 leading-relaxed">
+            Upload a facial photo or video frame on the left to initiate neural feature extraction, Grad-CAM attention mapping, and Error Level Analysis.
+          </p>
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <!-- EXPLAINABILITY SECTION (Original | Grad-CAM | ELA) -->
+  <div class="space-y-4">
+    <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+      <h3 class="text-base font-bold text-white uppercase tracking-wider flex items-center gap-2">
+        <svg class="h-5 w-5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.3-4.3"/>
+        </svg>
+        Explainability & Artifact Maps
+      </h3>
+      <span class="text-xs font-mono text-gray-400">Supporting Forensic Signals</span>
+    </div>
+
+    {% if report_filename %}
+      <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="text-sm font-bold text-white">3-Panel Unified Forensic Visualization</h4>
+            <p class="text-xs text-gray-400">1. Original Input Image &bull; 2. Grad-CAM Neural Attention Heatmap &bull; 3. Error Level Analysis (ELA)</p>
+          </div>
+          <a
+            href="/uploads/{{ report_filename }}"
+            target="_blank"
+            class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
+          >
+            <span>Open High-Res</span>
+            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="overflow-hidden rounded-xl border border-gray-800 bg-black/60 p-2">
+          <img
+            src="/uploads/{{ report_filename }}"
+            alt="Combined Explainability Report"
+            class="w-full h-auto rounded-lg object-contain max-h-[650px] mx-auto shadow-2xl"
+          />
+        </div>
+      </div>
+    {% else %}
+      <div class="rounded-xl border border-dashed border-gray-800 p-8 text-center bg-gray-900/40">
+        <p class="text-xs text-gray-500">Explainability unavailable for this prediction. Run an image analysis to generate visual evidence.</p>
+      </div>
+    {% endif %}
+
+    <!-- Scientific Interpretation Guide -->
+    <div class="rounded-xl border border-gray-800 bg-gray-900/60 p-5 text-xs text-gray-400 space-y-2">
+      <h5 class="text-xs font-bold text-gray-300 uppercase tracking-wide">Forensic Interpretation Protocol</h5>
+      <p>
+        <strong class="text-cyan-400">Grad-CAM:</strong> Highlights image regions contributing most significantly to the convolutional network's class prediction.
+      </p>
+      <p>
+        <strong class="text-blue-400">ELA:</strong> Reveals compression-level delta variances that indicate localized re-saving, face-splicing boundaries, or synthetic blending.
+      </p>
+      <p class="text-gray-500 italic">
+        *Important Note: Grad-CAM and ELA are supporting forensic decision-support signals and should be cross-examined alongside multimodal consistency.
+      </p>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

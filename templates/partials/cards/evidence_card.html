@@ -1,0 +1,168 @@
+<!-- 3 Large Modality Evidence Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+  <!-- 1. IMAGE EVIDENCE CARD -->
+  <div class="dg-glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 bg-gray-900/80 hover:border-cyan-500/30 transition-all">
+    <div>
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="p-2 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+              <circle cx="9" cy="9" r="2"/>
+              <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white tracking-wide">IMAGE EVIDENCE</h3>
+            <p class="text-[11px] text-gray-400">EfficientNet-B0 + Grad-CAM + ELA</p>
+          </div>
+        </div>
+        <span class="inline-flex items-center rounded-md bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold text-emerald-400 border border-emerald-500/20">
+          TRAINED
+        </span>
+      </div>
+
+      <div class="space-y-3 py-2">
+        <div class="flex items-center justify-between text-xs py-1 border-b border-gray-800">
+          <span class="text-gray-400">Status</span>
+          <span class="font-medium text-emerald-400">Online & Active</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1 border-b border-gray-800">
+          <span class="text-gray-400">Target Model</span>
+          <span class="font-mono text-gray-200">EfficientNet-B0 (C23)</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1 border-b border-gray-800">
+          <span class="text-gray-400">Explainability</span>
+          <span class="text-cyan-400 font-semibold">Grad-CAM + ELA 3-Panel</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1">
+          <span class="text-gray-400">Classes Detected</span>
+          <span class="text-gray-300">Original, FaceSwap, Deepfakes, +3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-5 mt-3 border-t border-gray-800/80">
+      <a
+        href="/test-image"
+        class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gray-800/80 hover:bg-cyan-600 hover:text-white px-4 py-2.5 text-xs font-bold text-cyan-400 border border-gray-700 hover:border-cyan-500 transition-all"
+      >
+        <span>Analyze Image</span>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. VIDEO EVIDENCE CARD -->
+  <div class="dg-glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 bg-gray-900/80 hover:border-blue-500/30 transition-all">
+    <div>
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="p-2 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m22 8-6 4 6 4V8Z"/>
+              <rect width="14" height="12" x="2" y="6" rx="2" ry="2"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white tracking-wide">VIDEO EVIDENCE</h3>
+            <p class="text-[11px] text-gray-400">CNN-GRU Temporal Model</p>
+          </div>
+        </div>
+        <span class="inline-flex items-center rounded-md bg-blue-500/10 px-2 py-0.5 text-[10px] font-bold text-blue-400 border border-blue-500/20">
+          TEMPORAL
+        </span>
+      </div>
+
+      <div class="space-y-3 py-2">
+        <div class="flex items-center justify-between text-xs py-1 border-b border-gray-800">
+          <span class="text-gray-400">Status</span>
+          <span class="font-medium text-blue-400">Online (w/ Fallback Stub)</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1 border-b border-gray-800">
+          <span class="text-gray-400">Primary Architecture</span>
+          <span class="font-mono text-gray-200">InceptionV3 + GRU</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1 border-b border-gray-800">
+          <span class="text-gray-400">Sampling</span>
+          <span class="text-gray-300">Frame Stride / Sequence</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1">
+          <span class="text-gray-400">Formats Supported</span>
+          <span class="text-gray-300">.mp4, .avi, .mov, .mkv</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-5 mt-3 border-t border-gray-800/80">
+      <a
+        href="/test-video"
+        class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gray-800/80 hover:bg-blue-600 hover:text-white px-4 py-2.5 text-xs font-bold text-blue-400 border border-gray-700 hover:border-blue-500 transition-all"
+      >
+        <span>Analyze Video</span>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 3. AUDIO EVIDENCE CARD -->
+  <div class="dg-glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 bg-gray-900/80 hover:border-amber-500/30 transition-all">
+    <div>
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="p-2 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" x2="12" y1="19" y2="22"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white tracking-wide">AUDIO EVIDENCE</h3>
+            <p class="text-[11px] text-gray-400">Acoustic Feature Heuristics</p>
+          </div>
+        </div>
+        <span class="inline-flex items-center rounded-md bg-amber-500/10 px-2 py-0.5 text-[10px] font-bold text-amber-400 border border-amber-500/20">
+          PROTOTYPE
+        </span>
+      </div>
+
+      <div class="space-y-3 py-2">
+        <div class="flex items-center justify-between text-xs py-1 border-b border-gray-800">
+          <span class="text-gray-400">Status</span>
+          <span class="font-medium text-amber-400">Acoustic Stub (Low Conf)</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1 border-b border-gray-800">
+          <span class="text-gray-400">Features Extracted</span>
+          <span class="font-mono text-gray-200">MFCC, ZCR, Flatness</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1 border-b border-gray-800">
+          <span class="text-gray-400">Sampling Rate</span>
+          <span class="text-gray-300">16 kHz Librosa Pipeline</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1">
+          <span class="text-gray-400">Formats Supported</span>
+          <span class="text-gray-300">.wav, .mp3, .flac, .m4a</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-5 mt-3 border-t border-gray-800/80">
+      <a
+        href="/test-audio"
+        class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gray-800/80 hover:bg-amber-600 hover:text-white px-4 py-2.5 text-xs font-bold text-amber-400 border border-gray-700 hover:border-amber-500 transition-all"
+      >
+        <span>Analyze Audio</span>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,15 @@
+{
+  "model_architecture": "efficientnet_b0",
+  "init_checkpoint": "E:\\ADL_PROJECT\\models\\efficientnet_b0_best.pth",
+  "output_checkpoint": "E:\\ADL_PROJECT\\models\\efficientnet_b0_mix_v2.pth",
+  "batch_size": 32,
+  "max_epochs": 6,
+  "patience": 2,
+  "backbone_lr": 2e-05,
+  "head_lr": 0.0001,
+  "weight_decay": 1e-05,
+  "optimizer": "AdamW",
+  "scheduler": "ReduceLROnPlateau(mode=min, factor=0.5, patience=1)",
+  "loss": "PartialLabelLoss",
+  "seed": 42
+}

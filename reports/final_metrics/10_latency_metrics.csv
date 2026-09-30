@@ -1,0 +1,7 @@
+Modality,Model,Hardware,Batch Size,Average Latency,Latency Unit,Throughput,Throughput Unit,Input Representation
+IMAGE,Xception,NVIDIA GeForce RTX 4050 Laptop GPU,32,7.2,ms / image,138.96,images / sec,299x299x3 RGB
+IMAGE,Vision Transformer (ViT-B/16),NVIDIA GeForce RTX 4050 Laptop GPU,32,5.89,ms / image,169.75,images / sec,224x224x3 RGB
+IMAGE,EfficientNet-B0 (mix_v2),NVIDIA GeForce RTX 4050 Laptop GPU,32,5.82,ms / image,171.7,images / sec,224x224x3 RGB
+VIDEO,CNN-GRU Temporal Model,NVIDIA GeForce RTX 4050 Laptop GPU,1,536.26,ms / video (20 frames),37.29,frames / sec,20x (224x224x3 RGB) sequence
+AUDIO,Baseline Log-Mel CNN,NVIDIA GeForce RTX 4050 Laptop GPU,32,2.14,ms / audio sample (4.0s clip),467.28,audio clips / sec,128x126 Log-Mel Spectrogram
+AUDIO,AASIST,NVIDIA GeForce RTX 4050 Laptop GPU,16,8.45,ms / audio sample (4.0s clip),118.34,audio clips / sec,"64,600-sample raw 16kHz waveform"

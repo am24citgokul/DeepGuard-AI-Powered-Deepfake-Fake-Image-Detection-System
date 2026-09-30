@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+
+{% block title %}Model Evaluation Metrics — DeepGuard X{% endblock %}
+{% block breadcrumb %}Evidence / Metrics{% endblock %}
+{% block header_title %}Model Evaluation & Performance Metrics{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+
+  <!-- Header Banner -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+    <div>
+      <h2 class="text-2xl font-black tracking-tight text-white">
+        FaceForensics++ C23 Benchmark Evaluation
+      </h2>
+      <p class="text-sm text-gray-400 mt-1 max-w-3xl">
+        Empirical evaluation metrics recorded from held-out test splits (4,500 test images across 6 manipulation classes) and training convergence curves.
+      </p>
+    </div>
+
+    <div>
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-400 border border-cyan-500/20 font-mono">
+        Dataset: 4,500 Test Samples
+      </span>
+    </div>
+  </div>
+
+  <!-- Active Model Notice Banner -->
+  <div class="rounded-2xl border border-cyan-500/30 bg-gradient-to-r from-cyan-950/40 via-gray-900 to-gray-900 p-5 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-xl">
+    <div class="flex items-center gap-3">
+      <div class="h-10 w-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">ACTIVE PRODUCTION CHECKPOINT</span>
+          <span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold text-emerald-400 border border-emerald-500/30">
+            CLASS-WEIGHT REBALANCED
+          </span>
+        </div>
+        <div class="text-sm font-mono font-bold text-white mt-0.5">models/efficientnet_b0_rebalanced.pth</div>
+      </div>
+    </div>
+    <div class="text-xs text-gray-400 md:text-right">
+      <span class="text-emerald-400 font-bold">+18.0% Real Recall</span> &bull; Penalizes false accusations on authentic user photos
+    </div>
+  </div>
+
+  <!-- Active Rebalanced Model Metric Cards -->
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    
+    <div class="dg-glass-card rounded-2xl p-5 border border-gray-800 bg-gray-900/80">
+      <span class="text-[11px] font-bold uppercase tracking-wider text-gray-400">Binary Accuracy</span>
+      <div class="text-3xl font-black text-white font-mono mt-1">79.5%</div>
+      <p class="text-[11px] text-gray-400 mt-1">Rebalanced Validation</p>
+    </div>
+
+    <div class="dg-glass-card rounded-2xl p-5 border border-gray-800 bg-gray-900/80">
+      <span class="text-[11px] font-bold uppercase tracking-wider text-gray-400">Real-Class Recall</span>
+      <div class="text-3xl font-black text-emerald-400 font-mono mt-1">53.6%</div>
+      <p class="text-[11px] text-emerald-400 mt-1">+18.0% vs Baseline (35.6%)</p>
+    </div>
+
+    <div class="dg-glass-card rounded-2xl p-5 border border-gray-800 bg-gray-900/80">
+      <span class="text-[11px] font-bold uppercase tracking-wider text-gray-400">Fake-Class Precision</span>
+      <div class="text-3xl font-black text-cyan-400 font-mono mt-1">90.1%</div>
+      <p class="text-[11px] text-cyan-400 mt-1">High Flag Reliability</p>
+    </div>
+
+    <div class="dg-glass-card rounded-2xl p-5 border border-gray-800 bg-gray-900/80">
+      <span class="text-[11px] font-bold uppercase tracking-wider text-gray-400">6-Class Accuracy</span>
+      <div class="text-3xl font-black text-blue-400 font-mono mt-1">60.2%</div>
+      <p class="text-[11px] text-blue-400 mt-1">Macro F1: 0.601</p>
+    </div>
+
+  </div>
+
+  <!-- Comparative Model Architecture Table -->
+  <div class="dg-glass-card rounded-2xl border border-gray-800 bg-gray-900/90 overflow-hidden shadow-xl">
+    <div class="p-5 border-b border-gray-800 flex items-center justify-between">
+      <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+        <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
+        Model Checkpoint Comparison (Validation Set: 4,500 Samples)
+      </h3>
+      <span class="text-[11px] font-mono text-gray-400">Step 14 Rebalancing Study</span>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-xs">
+        <thead class="bg-gray-950/60 text-gray-400 uppercase font-mono tracking-wider border-b border-gray-800">
+          <tr>
+            <th class="px-5 py-3">Evaluation Metric</th>
+            <th class="px-5 py-3">Original Model (`_best.pth`)</th>
+            <th class="px-5 py-3">Rebalanced Model (`_rebalanced.pth`)</th>
+            <th class="px-5 py-3 text-right">Delta / Impact</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-800/60 font-mono">
+          <tr class="hover:bg-gray-800/30">
+            <td class="px-5 py-3 font-sans text-gray-300 font-semibold">6-Class Validation Accuracy</td>
+            <td class="px-5 py-3 text-gray-400">59.42%</td>
+            <td class="px-5 py-3 text-white font-bold">60.22%</td>
+            <td class="px-5 py-3 text-right text-emerald-400 font-bold">+0.80%</td>
+          </tr>
+          <tr class="hover:bg-gray-800/30">
+            <td class="px-5 py-3 font-sans text-gray-300 font-semibold">Binary Validation Accuracy</td>
+            <td class="px-5 py-3 text-gray-400">82.22%</td>
+            <td class="px-5 py-3 text-white font-bold">79.49%</td>
+            <td class="px-5 py-3 text-right text-amber-400">-2.73%</td>
+          </tr>
+          <tr class="hover:bg-gray-800/30 bg-emerald-500/5">
+            <td class="px-5 py-3 font-sans text-emerald-300 font-bold">Original-Class (Real) Recall</td>
+            <td class="px-5 py-3 text-rose-400">35.60% (267 / 750)</td>
+            <td class="px-5 py-3 text-emerald-400 font-bold">53.60% (402 / 750)</td>
+            <td class="px-5 py-3 text-right text-emerald-400 font-bold">+18.00% (Major Fix)</td>
+          </tr>
+          <tr class="hover:bg-gray-800/30">
+            <td class="px-5 py-3 font-sans text-gray-300 font-semibold">Original-Class (Real) F1-Score</td>
+            <td class="px-5 py-3 text-gray-400">0.4003</td>
+            <td class="px-5 py-3 text-white font-bold">0.4655</td>
+            <td class="px-5 py-3 text-right text-emerald-400 font-bold">+0.0652</td>
+          </tr>
+          <tr class="hover:bg-gray-800/30">
+            <td class="px-5 py-3 font-sans text-gray-300 font-semibold">Fake-Class Precision</td>
+            <td class="px-5 py-3 text-gray-400">87.67%</td>
+            <td class="px-5 py-3 text-cyan-400 font-bold">90.12%</td>
+            <td class="px-5 py-3 text-right text-cyan-400 font-bold">+2.46%</td>
+          </tr>
+          <tr class="hover:bg-gray-800/30">
+            <td class="px-5 py-3 font-sans text-gray-300 font-semibold">Fake-Class Recall</td>
+            <td class="px-5 py-3 text-gray-400">91.55%</td>
+            <td class="px-5 py-3 text-white font-bold">84.67%</td>
+            <td class="px-5 py-3 text-right text-amber-400">-6.88% (Mitigated by Fusion)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Confusion Matrix Visualizations -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- 6-Class Multiclass Confusion Matrix -->
+    <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-3">
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider">
+          6-Class Confusion Matrix (Multiclass)
+        </h3>
+        <span class="text-[10px] font-mono text-cyan-400">Original &bull; 5 Manipulation Types</span>
+      </div>
+      <p class="text-xs text-gray-400">
+        Confusion distribution across: Original, FaceSwap, Deepfakes, Face2Face, NeuralTextures, and FaceShifter.
+      </p>
+      <div class="rounded-xl overflow-hidden border border-gray-800 bg-black/60 p-2">
+        <img
+          src="/reports-media/metrics/test_confusion_matrix.png"
+          alt="6-Class Confusion Matrix"
+          class="w-full h-auto rounded-lg object-contain max-h-[420px] mx-auto hover:scale-[1.01] transition-transform"
+        />
+      </div>
+    </div>
+
+    <!-- Binary Confusion Matrix -->
+    <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-3">
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider">
+          Binary Confusion Matrix (Real vs Fake)
+        </h3>
+        <span class="text-[10px] font-mono text-emerald-400">F1: 89.1%</span>
+      </div>
+      <p class="text-xs text-gray-400">
+        Aggregated binary decision boundary evaluating Authentic (Real) vs Synthetic (Manipulated) classifications.
+      </p>
+      <div class="rounded-xl overflow-hidden border border-gray-800 bg-black/60 p-2">
+        <img
+          src="/reports-media/metrics/test_binary_confusion_matrix.png"
+          alt="Binary Confusion Matrix"
+          class="w-full h-auto rounded-lg object-contain max-h-[420px] mx-auto hover:scale-[1.01] transition-transform"
+        />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Training Curves -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- Accuracy Curve -->
+    <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-3">
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider">
+          Training vs Validation Accuracy
+        </h3>
+        <span class="text-[10px] font-mono text-cyan-400">Convergence Monitor</span>
+      </div>
+      <div class="rounded-xl overflow-hidden border border-gray-800 bg-black/60 p-2">
+        <img
+          src="/reports-media/training_curves/training_vs_validation_accuracy.png"
+          alt="Training vs Validation Accuracy"
+          class="w-full h-auto rounded-lg object-contain max-h-[380px] mx-auto"
+        />
+      </div>
+    </div>
+
+    <!-- Loss Curve -->
+    <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-3">
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider">
+          Training vs Validation Loss
+        </h3>
+        <span class="text-[10px] font-mono text-blue-400">Cross-Entropy Loss</span>
+      </div>
+      <div class="rounded-xl overflow-hidden border border-gray-800 bg-black/60 p-2">
+        <img
+          src="/reports-media/training_curves/training_vs_validation_loss.png"
+          alt="Training vs Validation Loss"
+          class="w-full h-auto rounded-lg object-contain max-h-[380px] mx-auto"
+        />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Research Presentation Flow Diagram -->
+  <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-4">
+    <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+      <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+        <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
+        End-to-End Forensic Architecture Pipeline
+      </h3>
+      <span class="text-xs font-mono text-gray-400">PBL Research Specification</span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center text-xs">
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="text-[10px] font-mono font-bold text-cyan-400 block mb-1">STAGE 1</span>
+        <h4 class="font-bold text-white mb-1">Media Input</h4>
+        <p class="text-gray-400 text-[11px]">Image (JPG/PNG), Video (MP4), Audio (WAV)</p>
+      </div>
+
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="text-[10px] font-mono font-bold text-blue-400 block mb-1">STAGE 2</span>
+        <h4 class="font-bold text-white mb-1">Preprocessing</h4>
+        <p class="text-gray-400 text-[11px]">MTCNN Face Crops &bull; 16kHz DSP &bull; Frame Stride</p>
+      </div>
+
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="text-[10px] font-mono font-bold text-indigo-400 block mb-1">STAGE 3</span>
+        <h4 class="font-bold text-white mb-1">Deep Inference</h4>
+        <p class="text-gray-400 text-[11px]">EfficientNet-B0 &bull; CNN-GRU &bull; Heuristics</p>
+      </div>
+
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="text-[10px] font-mono font-bold text-amber-400 block mb-1">STAGE 4</span>
+        <h4 class="font-bold text-white mb-1">Explainability</h4>
+        <p class="text-gray-400 text-[11px]">Grad-CAM Heatmap &bull; 15x ELA Artifact Map</p>
+      </div>
+
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="text-[10px] font-mono font-bold text-emerald-400 block mb-1">STAGE 5</span>
+        <h4 class="font-bold text-white mb-1">Cross-Fusion</h4>
+        <p class="text-gray-400 text-[11px]">Consensus Engine &bull; Verdict & Confidence</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

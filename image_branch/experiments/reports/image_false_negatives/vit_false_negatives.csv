@@ -1,0 +1,135 @@
+filepath,true_label,predicted_label,real_probability,fake_probability,correct,model,checkpoint
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id12_id10_0004_face_1467.jpg,1,0,0.99951171875,0.0006117820739746094,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id12_id10_0004_face_1463.jpg,1,0,0.994140625,0.005718231201171875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id60_id59_0003_face_47438.jpg,1,0,0.99169921875,0.00839996337890625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id49_id50_0008_face_39296.jpg,1,0,0.9912109375,0.00896453857421875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\3D30FJCL4B.jpg,1,0,0.98828125,0.0115966796875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\2EOYODZTJ1.jpg,1,0,0.98779296875,0.01229095458984375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id23_id32_0002_face_12301.jpg,1,0,0.98779296875,0.01238250732421875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id49_id50_0008_face_39301.jpg,1,0,0.982421875,0.0177459716796875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\1IWG9U9LNO.jpg,1,0,0.96923828125,0.0309906005859375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id49_id50_0008_face_39303.jpg,1,0,0.96728515625,0.032806396484375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id54_id50_0006_face_44097.jpg,1,0,0.96142578125,0.03857421875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\2Y7PCZJQVA.jpg,1,0,0.96044921875,0.03961181640625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id49_id50_0008_face_39300.jpg,1,0,0.958984375,0.0411376953125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id56_id54_0008_face_45735.jpg,1,0,0.95849609375,0.0413818359375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id49_id50_0008_face_39298.jpg,1,0,0.9580078125,0.041839599609375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\2KP8QLN2GG.jpg,1,0,0.9560546875,0.043731689453125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id12_id7_0005_face_1525.jpg,1,0,0.95361328125,0.046173095703125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\1D2MUUXC2Y.jpg,1,0,0.95068359375,0.04913330078125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id7_id13_0009_face_49256.jpg,1,0,0.9501953125,0.049774169921875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id56_id50_0008_face_45414.jpg,1,0,0.9482421875,0.05169677734375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id7_id13_0006_face_49232.jpg,1,0,0.94677734375,0.0531005859375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id56_id54_0008_face_45736.jpg,1,0,0.94580078125,0.05419921875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id28_id3_0002_face_18418.jpg,1,0,0.939453125,0.060577392578125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\476_400_f0.jpg,1,0,0.92919921875,0.0706787109375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id12_id7_0005_face_1530.jpg,1,0,0.927734375,0.07232666015625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id57_id56_0008_face_46481.jpg,1,0,0.92724609375,0.07293701171875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\2A6IMGLMIP.jpg,1,0,0.92529296875,0.0745849609375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\1J90EHO8GH.jpg,1,0,0.92138671875,0.07879638671875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id38_id26_0005_face_30529.jpg,1,0,0.9140625,0.08599853515625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id57_id56_0008_face_46483.jpg,1,0,0.90966796875,0.09039306640625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\052_108_f3.jpg,1,0,0.90771484375,0.092529296875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Test\fake\id2_id4_0006_face_20883.jpg,1,0,0.90234375,0.0975341796875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Val\fake\id17_id35_0001_face_4468.jpg,1,0,0.89990234375,0.10015869140625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\fake_203_aug_4.jpg,1,0,0.8876953125,0.112060546875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceShifter\871_814_f1.jpg,1,0,0.88720703125,0.11297607421875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\871_814_f1.jpg,1,0,0.884765625,0.1151123046875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Test\fake\id61_id60_0006_face_47773.jpg,1,0,0.88330078125,0.11651611328125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id2_id4_0006_face_20889.jpg,1,0,0.88232421875,0.11773681640625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id6_id9_0008_face_48983.jpg,1,0,0.87939453125,0.12078857421875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\476_400_f1.jpg,1,0,0.876953125,0.12310791015625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id44_id42_0005_face_35920.jpg,1,0,0.87255859375,0.127197265625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\2N3NJMLGGM.jpg,1,0,0.86572265625,0.1343994140625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Val\fake\id55_id56_0007_face_45146.jpg,1,0,0.865234375,0.1348876953125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id44_id48_0005_face_36193.jpg,1,0,0.8642578125,0.1358642578125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id23_id32_0002_face_12302.jpg,1,0,0.86181640625,0.1380615234375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id35_id2_0008_face_27920.jpg,1,0,0.861328125,0.138671875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id60_id61_0009_face_47654.jpg,1,0,0.85595703125,0.144287109375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceShifter\748_355_f0.jpg,1,0,0.85302734375,0.1470947265625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Deepfakes\052_108_f1.jpg,1,0,0.849609375,0.1505126953125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id16_id2_0004_face_2715.jpg,1,0,0.84619140625,0.15380859375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id49_id57_0000_face_39834.jpg,1,0,0.84423828125,0.155517578125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\339_392_f1.jpg,1,0,0.83544921875,0.164306640625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Test\fake\id41_id40_0009_face_34166.jpg,1,0,0.83056640625,0.1695556640625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\871_814_f0.jpg,1,0,0.83056640625,0.16943359375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\339_392_f0.jpg,1,0,0.8291015625,0.1710205078125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\339_392_f0.jpg,1,0,0.82666015625,0.1734619140625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\1YAA0UO330.jpg,1,0,0.8251953125,0.1749267578125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\2IRC7ILB6C.jpg,1,0,0.82275390625,0.177490234375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Val\fake\id34_id35_0006_face_27002.jpg,1,0,0.8212890625,0.1787109375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\052_108_f2.jpg,1,0,0.818359375,0.181396484375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\748_355_f2.jpg,1,0,0.818359375,0.1815185546875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\476_400_f1.jpg,1,0,0.8154296875,0.1846923828125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\955_078_f4.jpg,1,0,0.81494140625,0.185302734375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Deepfakes\724_725_f1.jpg,1,0,0.81494140625,0.1849365234375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id45_id47_0007_face_36866.jpg,1,0,0.80517578125,0.194580078125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\1ZRLLCR0SU.jpg,1,0,0.80224609375,0.1978759765625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id57_id56_0008_face_46480.jpg,1,0,0.7998046875,0.2001953125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\052_108_f3.jpg,1,0,0.7978515625,0.2021484375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Test\fake\id32_id33_0006_face_25146.jpg,1,0,0.79248046875,0.2073974609375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\871_814_f0.jpg,1,0,0.7919921875,0.207763671875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Test\fake\id60_id5_0002_face_47515.jpg,1,0,0.7900390625,0.2098388671875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id16_id9_0009_face_3537.jpg,1,0,0.787109375,0.2127685546875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\726_713_f4.jpg,1,0,0.783203125,0.216796875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\0L4J0907U5.jpg,1,0,0.78076171875,0.2191162109375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\726_713_f3.jpg,1,0,0.78076171875,0.2193603515625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id49_id57_0000_face_39829.jpg,1,0,0.77783203125,0.2222900390625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Val\fake\id3_id9_0007_face_33324.jpg,1,0,0.77734375,0.2225341796875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\791_770_f0.jpg,1,0,0.775390625,0.2247314453125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Deepfakes\276_185_f2.jpg,1,0,0.77490234375,0.2249755859375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceShifter\646_643_f3.jpg,1,0,0.77392578125,0.225830078125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceShifter\276_185_f0.jpg,1,0,0.7705078125,0.2293701171875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\052_108_f0.jpg,1,0,0.767578125,0.2322998046875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\200_189_f3.jpg,1,0,0.76708984375,0.23291015625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\214_255_f4.jpg,1,0,0.7666015625,0.2332763671875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceShifter\476_400_f0.jpg,1,0,0.763671875,0.236328125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\339_392_f4.jpg,1,0,0.759765625,0.239990234375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Deepfakes\105_180_f1.jpg,1,0,0.75927734375,0.2408447265625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\646_643_f3.jpg,1,0,0.7568359375,0.2432861328125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\719_737_f4.jpg,1,0,0.75537109375,0.24462890625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\818_820_f3.jpg,1,0,0.75439453125,0.245361328125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\276_185_f0.jpg,1,0,0.75244140625,0.2476806640625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\831_508_f1.jpg,1,0,0.75146484375,0.2484130859375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\339_392_f4.jpg,1,0,0.75048828125,0.24951171875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\105_180_f2.jpg,1,0,0.74609375,0.254150390625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\775_742_f4.jpg,1,0,0.74462890625,0.25537109375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\566_617_f3.jpg,1,0,0.74462890625,0.25537109375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\955_078_f4.jpg,1,0,0.74267578125,0.257568359375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive(3)\Celeb_V2\Train\fake\id51_id55_0008_face_42252.jpg,1,0,0.7412109375,0.259033203125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\726_713_f4.jpg,1,0,0.7412109375,0.258544921875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\201_203_f2.jpg,1,0,0.74072265625,0.25927734375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\748_355_f4.jpg,1,0,0.74072265625,0.25927734375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\555_516_f4.jpg,1,0,0.73974609375,0.260009765625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\475_265_f4.jpg,1,0,0.73828125,0.26171875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\027_009_f2.jpg,1,0,0.73828125,0.26171875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\201_203_f0.jpg,1,0,0.73779296875,0.26220703125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\315_322_f3.jpg,1,0,0.7373046875,0.2626953125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\729_727_f2.jpg,1,0,0.73388671875,0.26611328125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Deepfakes\087_081_f3.jpg,1,0,0.7333984375,0.2666015625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\726_713_f0.jpg,1,0,0.73095703125,0.269287109375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\856_881_f3.jpg,1,0,0.72900390625,0.27099609375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\748_355_f3.jpg,1,0,0.7275390625,0.2724609375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\719_737_f4.jpg,1,0,0.7265625,0.273681640625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\052_108_f0.jpg,1,0,0.7255859375,0.2744140625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\DEEPFAKE\archive (1)\Final Dataset\Fake\3AYSWM7BN7.jpg,1,0,0.7255859375,0.274169921875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\466_428_f0.jpg,1,0,0.72412109375,0.27587890625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\087_081_f2.jpg,1,0,0.72314453125,0.277099609375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\200_189_f4.jpg,1,0,0.72314453125,0.277099609375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\466_428_f4.jpg,1,0,0.7216796875,0.2783203125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Deepfakes\492_325_f0.jpg,1,0,0.71923828125,0.28076171875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\276_185_f2.jpg,1,0,0.71923828125,0.28076171875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\747_854_f2.jpg,1,0,0.71923828125,0.281005859375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\102_114_f4.jpg,1,0,0.71875,0.281494140625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\200_189_f3.jpg,1,0,0.7158203125,0.2841796875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\201_203_f2.jpg,1,0,0.71484375,0.284912109375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Face2Face\014_790_f3.jpg,1,0,0.71435546875,0.285888671875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\719_737_f4.jpg,1,0,0.71337890625,0.28662109375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Deepfakes\052_108_f3.jpg,1,0,0.71142578125,0.28857421875,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\339_392_f1.jpg,1,0,0.71044921875,0.289306640625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\201_203_f2.jpg,1,0,0.70849609375,0.29150390625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\471_455_f3.jpg,1,0,0.70751953125,0.292236328125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Deepfakes\592_500_f0.jpg,1,0,0.7060546875,0.294189453125,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\Deepfakes\775_742_f1.jpg,1,0,0.701171875,0.298583984375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\FaceSwap\489_022_f4.jpg,1,0,0.701171875,0.298583984375,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth
+E:\ADL_PROJECT\data\raw\FF++C32-Frames\NeuralTextures\508_831_f2.jpg,1,0,0.70068359375,0.299072265625,False,vit,E:\ADL_PROJECT\image_branch\experiments\vit\best_model.pth

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>{% block title %}DeepGuard X — AI Identity Authenticity Screening{% endblock %}</title>
+  
+  <meta name="description" content="DeepGuard X — Multimodal deepfake and synthetic media forensic screening platform powered by EfficientNet-B0, CNN-GRU, and Cross-Modal Fusion." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+
+  <!-- Google Font: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- TailAdmin Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  
+  <!-- DeepGuard X Cyber Forensic Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/deepguard.css') }}" />
+
+  <script>
+    // Immediate dark mode verification to prevent flash
+    (function () {
+      var saved = localStorage.getItem("darkMode");
+      if (saved === null || JSON.parse(saved) === true) {
+        document.documentElement.classList.add("dark");
+        document.documentElement.setAttribute("data-color-scheme", "dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.setAttribute("data-color-scheme", "light");
+      }
+    })();
+  </script>
+</head>
+
+<body
+  x-data="{
+    page: '{{ active_page or "dashboard" }}',
+    loaded: true,
+    darkMode: true,
+    sidebarToggle: false
+  }"
+  x-init="
+    let savedTheme = localStorage.getItem('darkMode');
+    darkMode = savedTheme !== null ? JSON.parse(savedTheme) : true;
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    $watch('darkMode', val => {
+      localStorage.setItem('darkMode', JSON.stringify(val));
+      if (val) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    });
+  "
+  :class="{'dark bg-[#080e1a] text-gray-100': darkMode === true, 'bg-gray-100 text-gray-900': darkMode === false}"
+  class="font-outfit antialiased selection:bg-cyan-500 selection:text-white min-h-screen"
+>
+
+  <!-- Preloader Component -->
+  {% include 'partials/preloader.html' %}
+
+  <!-- Mobile Overlay Backdrop -->
+  {% include 'partials/overlay.html' %}
+
+  <!-- Page Wrapper -->
+  <div class="flex h-screen overflow-hidden">
+
+    <!-- TailAdmin Sidebar -->
+    {% include 'partials/sidebar.html' %}
+
+    <!-- Content Area (Header + Main) -->
+    <div class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+
+      <!-- TailAdmin Header -->
+      {% include 'partials/header.html' %}
+
+      <!-- Main Body Container -->
+      <main class="flex-1 px-4 py-6 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto space-y-6">
+
+        <!-- Error Notification Banner if present -->
+        {% if error %}
+        <div class="rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm text-rose-300 flex items-start gap-3 shadow-lg shadow-rose-950/20">
+          <svg class="h-5 w-5 text-rose-400 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <div>
+            <strong class="font-bold">Error Encountered:</strong>
+            <span class="ml-1">{{ error }}</span>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Child Page Content Injected Here -->
+        {% block content %}{% endblock %}
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="mt-auto border-t border-gray-200 bg-white/50 px-6 py-4 text-center text-xs text-gray-500 backdrop-blur-sm dark:border-gray-800/80 dark:bg-gray-900/40 dark:text-gray-400">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2 max-w-7xl mx-auto">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-gray-800 dark:text-gray-200">DEEPGUARD X</span>
+            <span>—</span>
+            <span>Multimodal AI Forensic Screening System</span>
+          </div>
+          <div class="font-mono text-[11px] text-gray-400">
+            EfficientNet-B0 &bull; CNN-GRU &bull; Heuristic Fusion &bull; Port 5001
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Loading State Modal (Triggered on Analysis Submit) -->
+  <div
+    id="analysis-loading-overlay"
+    class="fixed inset-0 z-999999 hidden items-center justify-center bg-gray-950/80 backdrop-blur-md transition-all"
+  >
+    <div class="dg-glass-card rounded-2xl border border-cyan-500/40 p-8 text-center max-w-md w-full mx-4 shadow-2xl relative overflow-hidden">
+      <div class="cyber-scan-line"></div>
+      
+      <div class="relative mx-auto mb-5 h-20 w-20 flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full border-4 border-cyan-500/20"></div>
+        <div class="absolute inset-0 animate-spin rounded-full border-4 border-cyan-400 border-t-transparent"></div>
+        <svg class="h-8 w-8 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+
+      <h3 class="text-lg font-black text-white tracking-wide uppercase">
+        ANALYZING MEDIA ARTIFACT...
+      </h3>
+      
+      <p class="text-xs text-gray-300 mt-2">
+        Extracting forensic spatial & temporal features, running neural network inference, and generating explainability evidence.
+      </p>
+
+      <div class="mt-5 space-y-1.5 text-[11px] font-mono text-cyan-400/90 text-left bg-black/40 p-3 rounded-lg border border-gray-800">
+        <div class="flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+          <span>Stage 1: Preprocessing & Normalization</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+          <span>Stage 2: Model Inference Forward Pass</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+          <span>Stage 3: Evidence Map Synthesis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='js/bundle.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/screening.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

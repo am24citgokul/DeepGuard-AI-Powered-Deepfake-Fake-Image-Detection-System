@@ -1,0 +1,29 @@
+<!-- Grad-CAM Neural Attention Map Panel -->
+<div class="rounded-xl border border-gray-800 bg-gray-900/80 p-5 space-y-3">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="h-2.5 w-2.5 rounded-full bg-cyan-400"></span>
+      <h4 class="text-sm font-bold text-white tracking-wide">Grad-CAM Neural Attention</h4>
+    </div>
+    <span class="text-[10px] font-mono text-gray-400 uppercase">Feature Localization</span>
+  </div>
+
+  <p class="text-xs text-gray-400 leading-relaxed">
+    Highlights the latent spatial activations inside the convolutional backbone that contributed most strongly to the class prediction.
+  </p>
+
+  {% if report_filename %}
+  <div class="mt-3 overflow-hidden rounded-lg border border-gray-800 bg-black/50">
+    <img
+      src="/uploads/{{ report_filename }}"
+      alt="Combined Grad-CAM and ELA Explainability Report"
+      class="w-full object-contain max-h-[500px] hover:scale-[1.01] transition-transform duration-300"
+      loading="lazy"
+    />
+  </div>
+  {% else %}
+  <div class="rounded-lg border border-dashed border-gray-800 p-8 text-center text-xs text-gray-500">
+    Explainability unavailable for this prediction.
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,165 @@
+{
+  "timestamp": "2026-09-16 10:25:59",
+  "model_architecture": "efficientnet_b0",
+  "checkpoint_evaluated": "E:\\ADL_PROJECT\\models\\efficientnet_b0_best.pth",
+  "checkpoint_epoch": 5,
+  "test_dataset_size": 4500,
+  "overall_test_metrics": {
+    "acc_6class": 0.5695555555555556,
+    "macro_precision_6class": 0.5727913226829522,
+    "macro_recall_6class": 0.5695555555555556,
+    "macro_f1_6class": 0.561465105084246,
+    "binary_acc": 0.8126666666666666,
+    "binary_prec": 0.8663977816990169,
+    "binary_rec": 0.9165333333333333,
+    "binary_f1": 0.8907606582868991
+  },
+  "per_class_metrics": {
+    "Original": {
+      "label_id": 0,
+      "precision": 0.41275797373358347,
+      "recall": 0.29333333333333333,
+      "f1_score": 0.34294621979734996,
+      "support": 750
+    },
+    "FaceSwap": {
+      "label_id": 1,
+      "precision": 0.6318252730109204,
+      "recall": 0.54,
+      "f1_score": 0.582314881380302,
+      "support": 750
+    },
+    "Deepfakes": {
+      "label_id": 2,
+      "precision": 0.7536,
+      "recall": 0.628,
+      "f1_score": 0.6850909090909091,
+      "support": 750
+    },
+    "Face2Face": {
+      "label_id": 3,
+      "precision": 0.60932944606414,
+      "recall": 0.5573333333333333,
+      "f1_score": 0.5821727019498607,
+      "support": 750
+    },
+    "NeuralTextures": {
+      "label_id": 4,
+      "precision": 0.4817961165048544,
+      "recall": 0.5293333333333333,
+      "f1_score": 0.5044472681067345,
+      "support": 750
+    },
+    "FaceShifter": {
+      "label_id": 5,
+      "precision": 0.5474391267842149,
+      "recall": 0.8693333333333333,
+      "f1_score": 0.6718186501803194,
+      "support": 750
+    }
+  },
+  "best_performing_class": {
+    "class_name": "Deepfakes",
+    "f1_score": 0.6850909090909091
+  },
+  "worst_performing_class": {
+    "class_name": "Original",
+    "f1_score": 0.34294621979734996
+  },
+  "best_manipulation_type": {
+    "class_name": "Deepfakes",
+    "f1_score": 0.6850909090909091
+  },
+  "worst_manipulation_type": {
+    "class_name": "NeuralTextures",
+    "f1_score": 0.5044472681067345
+  },
+  "val_vs_test_comparison": {
+    "validation_epoch5": {
+      "acc_6class": 0.5942222222222222,
+      "macro_f1_6class": 0.5881262337520553,
+      "binary_acc": 0.8222222222222222,
+      "binary_prec": 0.8766598569969356,
+      "binary_rec": 0.9154666666666667,
+      "binary_f1": 0.8956430993999478
+    },
+    "test_set": {
+      "acc_6class": 0.5695555555555556,
+      "macro_f1_6class": 0.561465105084246,
+      "binary_acc": 0.8126666666666666,
+      "binary_prec": 0.8663977816990169,
+      "binary_rec": 0.9165333333333333,
+      "binary_f1": 0.8907606582868991
+    },
+    "differences": {
+      "acc_6class_diff_pct": 2.4666666666666615,
+      "macro_f1_diff_pct": 2.666112866780934,
+      "binary_f1_diff_pct": 0.48824411130486967
+    },
+    "consistency_verdict": "Consistent with validation (within normal statistical margin; zero data leakage confirmed)"
+  },
+  "confusion_matrices": {
+    "6class_matrix": [
+      [
+        220,
+        76,
+        31,
+        115,
+        174,
+        134
+      ],
+      [
+        103,
+        405,
+        45,
+        49,
+        66,
+        82
+      ],
+      [
+        51,
+        63,
+        471,
+        35,
+        57,
+        73
+      ],
+      [
+        74,
+        44,
+        33,
+        418,
+        99,
+        82
+      ],
+      [
+        65,
+        35,
+        30,
+        55,
+        397,
+        168
+      ],
+      [
+        20,
+        18,
+        15,
+        14,
+        31,
+        652
+      ]
+    ],
+    "binary_matrix": [
+      [
+        220,
+        530
+      ],
+      [
+        313,
+        3437
+      ]
+    ],
+    "6class_heatmap_path": "E:\\ADL_PROJECT\\reports\\metrics\\test_confusion_matrix.png",
+    "binary_heatmap_path": "E:\\ADL_PROJECT\\reports\\metrics\\test_binary_confusion_matrix.png"
+  }
+}

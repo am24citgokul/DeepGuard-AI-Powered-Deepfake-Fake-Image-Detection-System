@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}About Project — DeepGuard X{% endblock %}
+{% block breadcrumb %}System / About{% endblock %}
+{% block header_title %}About DeepGuard X{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+
+  <!-- Header Banner -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+    <div>
+      <h2 class="text-2xl font-black tracking-tight text-white">
+        Project Background & Research Architecture
+      </h2>
+      <p class="text-sm text-gray-400 mt-1">
+        ADL Project — Multimodal Deepfake & Synthetic Identity Fraud Screening Framework.
+      </p>
+    </div>
+
+    <div>
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-400 border border-cyan-500/20">
+        PBL Capstone Demonstration
+      </span>
+    </div>
+  </div>
+
+  <!-- Architecture Overview -->
+  <div class="dg-glass-card rounded-2xl p-6 sm:p-8 border border-gray-800 bg-gray-900/90 space-y-5">
+    <div class="flex items-center gap-3">
+      <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-500 flex items-center justify-center text-white">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-lg font-black text-white">DEEPGUARD X</h3>
+        <p class="text-xs text-gray-400">AI Identity Authenticity Screening System</p>
+      </div>
+    </div>
+
+    <p class="text-sm text-gray-300 leading-relaxed">
+      DeepGuard X addresses identity spoofing and multimedia fraud by combining single-modality neural feature extraction with a multi-branch consensus engine. Rather than relying on a single fallible classification score, the system examines spatial features, compression artifacts, temporal sequence coherence, and acoustic traits to arrive at an explainable authenticity rating.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-3 text-xs">
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="font-bold text-cyan-400 uppercase block mb-1">Image Modality</span>
+        <p class="text-gray-300">EfficientNet-B0 trained on FaceForensics++ C23 across 6 classes with Grad-CAM neural attention and Error Level Analysis (ELA).</p>
+      </div>
+
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="font-bold text-blue-400 uppercase block mb-1">Video Modality</span>
+        <p class="text-gray-300">CNN-GRU sequence recurrence network extracting inter-frame temporal cues, supported by a multi-frame aggregation fallback provider.</p>
+      </div>
+
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="font-bold text-amber-400 uppercase block mb-1">Audio Modality</span>
+        <p class="text-gray-300">Acoustic feature analysis measuring spectral flatness, zero-crossing rates, and high-order MFCC variance to detect synthetic vocoder artifacts.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dataset & Benchmarks -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-3">
+      <h4 class="text-sm font-bold text-white uppercase tracking-wider">Benchmark Dataset</h4>
+      <p class="text-xs text-gray-300 leading-relaxed">
+        Trained and evaluated on the standardized <strong>FaceForensics++ (C23 light compression)</strong> dataset, comprising Original videos alongside 5 representative deepfake manipulation methods: FaceSwap, Deepfakes, Face2Face, NeuralTextures, and FaceShifter.
+      </p>
+    </div>
+
+    <div class="dg-glass-card rounded-2xl p-6 border border-gray-800 bg-gray-900/90 space-y-3">
+      <h4 class="text-sm font-bold text-white uppercase tracking-wider">Academic Disclosure</h4>
+      <p class="text-xs text-gray-300 leading-relaxed">
+        DeepGuard X is an academic decision-support screening tool. Outputs are formulated as forensic likelihood scores (AUTHENTIC, REVIEW REQUIRED, HIGH RISK) rather than definitive legal proof, fostering accountable human-in-the-loop verification.
+      </p>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

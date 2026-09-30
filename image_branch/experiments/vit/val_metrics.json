@@ -1,0 +1,37 @@
+{
+  "model": "vit",
+  "checkpoint": "E:\\ADL_PROJECT\\image_branch\\experiments\\vit\\best_model.pth",
+  "best_val_auc": 0.8966055407670315,
+  "selected_threshold_from_val": 0.30000000000000004,
+  "metrics_at_selected_threshold": {
+    "threshold": 0.30000000000000004,
+    "accuracy": 0.7766429840142096,
+    "precision": 0.7131596984235778,
+    "real_recall": 0.6286601597160604,
+    "fake_recall": 0.9248888888888889,
+    "specificity": 0.6286601597160604,
+    "fpr": 0.3713398402839397,
+    "fnr": 0.07511111111111111,
+    "f1": 0.8053405572755418,
+    "roc_auc": 0.8966055407670315,
+    "pr_auc": 0.9008968128314238,
+    "brier": 0.1346435546875,
+    "ece": 0.04709039149445286,
+    "confusion_matrix": {
+      "tn": 1417,
+      "fp": 837,
+      "fn": 169,
+      "tp": 2081,
+      "raw": [
+        [
+          1417,
+          837
+        ],
+        [
+          169,
+          2081
+        ]
+      ]
+    }
+  }
+}

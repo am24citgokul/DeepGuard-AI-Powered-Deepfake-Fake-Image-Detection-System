@@ -1,0 +1,552 @@
+{
+  "in_distribution_ffpp_binary_acc": 0.8126666666666666,
+  "ood_overall_acc": 0.5,
+  "ood_ai_generated_recall": 0.7333333333333333,
+  "ood_human_real_specificity": 0.26666666666666666,
+  "ai_samples_correct": 22,
+  "human_samples_correct": 8,
+  "ai_results": [
+    {
+      "filename": "5b7276c2227a478a85aa79a216c35b9f.jpg",
+      "path": "train_data/5b7276c2227a478a85aa79a216c35b9f.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.3330078125,
+      "correct": true
+    },
+    {
+      "filename": "542e5fce221e42cfb676c1db40ee0dc2.jpg",
+      "path": "train_data/542e5fce221e42cfb676c1db40ee0dc2.jpg",
+      "true_label": "AI-generated",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.27294921875,
+      "correct": false
+    },
+    {
+      "filename": "5fd465da4ac04630b5b17a8a9a1477f9.jpg",
+      "path": "train_data/5fd465da4ac04630b5b17a8a9a1477f9.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.36181640625,
+      "correct": true
+    },
+    {
+      "filename": "6ec2970ef68941dd93099db022b335cd.jpg",
+      "path": "train_data/6ec2970ef68941dd93099db022b335cd.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Face2Face",
+      "confidence": 0.386962890625,
+      "correct": true
+    },
+    {
+      "filename": "e8263ce7c75f4742aab049bc2aa7203c.jpg",
+      "path": "train_data/e8263ce7c75f4742aab049bc2aa7203c.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.87255859375,
+      "correct": true
+    },
+    {
+      "filename": "02e7e9edea4d4f49bad3590f5f7d7bec.jpg",
+      "path": "train_data/02e7e9edea4d4f49bad3590f5f7d7bec.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Deepfakes",
+      "confidence": 0.32080078125,
+      "correct": true
+    },
+    {
+      "filename": "3a8ec8c857d848dbabec842df10142b8.jpg",
+      "path": "train_data/3a8ec8c857d848dbabec842df10142b8.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Deepfakes",
+      "confidence": 0.48876953125,
+      "correct": true
+    },
+    {
+      "filename": "1f437589b4a54bdd951a7e5667207642.jpg",
+      "path": "train_data/1f437589b4a54bdd951a7e5667207642.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Deepfakes",
+      "confidence": 0.3173828125,
+      "correct": true
+    },
+    {
+      "filename": "66c593d2c38f4d5a82c2770cd3a2cf8e.jpg",
+      "path": "train_data/66c593d2c38f4d5a82c2770cd3a2cf8e.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Deepfakes",
+      "confidence": 0.341064453125,
+      "correct": true
+    },
+    {
+      "filename": "cabac9444b7049b3843999a30a6d7665.jpg",
+      "path": "train_data/cabac9444b7049b3843999a30a6d7665.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.36083984375,
+      "correct": true
+    },
+    {
+      "filename": "6dce82ef214b41a88934946d44e14066.jpg",
+      "path": "train_data/6dce82ef214b41a88934946d44e14066.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.353271484375,
+      "correct": true
+    },
+    {
+      "filename": "c2f2b17d81934dd1b5b09556331b31b6.jpg",
+      "path": "train_data/c2f2b17d81934dd1b5b09556331b31b6.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Face2Face",
+      "confidence": 0.2705078125,
+      "correct": true
+    },
+    {
+      "filename": "d75449c6d52147c4816bf6ae2ce5a255.jpg",
+      "path": "train_data/d75449c6d52147c4816bf6ae2ce5a255.jpg",
+      "true_label": "AI-generated",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.4453125,
+      "correct": false
+    },
+    {
+      "filename": "d3395df9ce5c4d3395f11bb7c866c844.jpg",
+      "path": "train_data/d3395df9ce5c4d3395f11bb7c866c844.jpg",
+      "true_label": "AI-generated",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.263427734375,
+      "correct": false
+    },
+    {
+      "filename": "0a902b9093f84c3d9997473bb62df927.jpg",
+      "path": "train_data/0a902b9093f84c3d9997473bb62df927.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.343505859375,
+      "correct": true
+    },
+    {
+      "filename": "077becb9898541679a474da5ed5efb0e.jpg",
+      "path": "train_data/077becb9898541679a474da5ed5efb0e.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Deepfakes",
+      "confidence": 0.41455078125,
+      "correct": true
+    },
+    {
+      "filename": "1b6d50da65c5444ca17207c39027cda7.jpg",
+      "path": "train_data/1b6d50da65c5444ca17207c39027cda7.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Face2Face",
+      "confidence": 0.41943359375,
+      "correct": true
+    },
+    {
+      "filename": "f031c6ed9ab54f0cb3a613f7a2164634.jpg",
+      "path": "train_data/f031c6ed9ab54f0cb3a613f7a2164634.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.458251953125,
+      "correct": true
+    },
+    {
+      "filename": "1ae4e8a876144439bee26145b72842b7.jpg",
+      "path": "train_data/1ae4e8a876144439bee26145b72842b7.jpg",
+      "true_label": "AI-generated",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.66162109375,
+      "correct": false
+    },
+    {
+      "filename": "355780ad8e904da2a78b1b7a31034288.jpg",
+      "path": "train_data/355780ad8e904da2a78b1b7a31034288.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.66748046875,
+      "correct": true
+    },
+    {
+      "filename": "e61c7247a98b4b12b1aa609abcca78b5.jpg",
+      "path": "train_data/e61c7247a98b4b12b1aa609abcca78b5.jpg",
+      "true_label": "AI-generated",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.736328125,
+      "correct": false
+    },
+    {
+      "filename": "643449441e774a3db4f78c5a6b407817.jpg",
+      "path": "train_data/643449441e774a3db4f78c5a6b407817.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Face2Face",
+      "confidence": 0.66796875,
+      "correct": true
+    },
+    {
+      "filename": "e5087f1fc1854a5fbb539e8decd37d8f.jpg",
+      "path": "train_data/e5087f1fc1854a5fbb539e8decd37d8f.jpg",
+      "true_label": "AI-generated",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.43896484375,
+      "correct": false
+    },
+    {
+      "filename": "9a27c4d69ec942e490c95de458653cc7.jpg",
+      "path": "train_data/9a27c4d69ec942e490c95de458653cc7.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "Deepfakes",
+      "confidence": 0.298095703125,
+      "correct": true
+    },
+    {
+      "filename": "8073738feeda4b4cbf9d21f088733655.jpg",
+      "path": "train_data/8073738feeda4b4cbf9d21f088733655.jpg",
+      "true_label": "AI-generated",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.352294921875,
+      "correct": false
+    },
+    {
+      "filename": "96262ef092d446a3b3f6ce46581249c6.jpg",
+      "path": "train_data/96262ef092d446a3b3f6ce46581249c6.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.76123046875,
+      "correct": true
+    },
+    {
+      "filename": "36767bf95c7541edadac3ea48f66048f.jpg",
+      "path": "train_data/36767bf95c7541edadac3ea48f66048f.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.2783203125,
+      "correct": true
+    },
+    {
+      "filename": "7063033afff44159a74965b2533b7e91.jpg",
+      "path": "train_data/7063033afff44159a74965b2533b7e91.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.351318359375,
+      "correct": true
+    },
+    {
+      "filename": "29dde6c308ea4617ab7e0d15bd4bfbeb.jpg",
+      "path": "train_data/29dde6c308ea4617ab7e0d15bd4bfbeb.jpg",
+      "true_label": "AI-generated",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.3828125,
+      "correct": true
+    },
+    {
+      "filename": "b2f4a3a5d55c415aa21ed3b7bbee25df.jpg",
+      "path": "train_data/b2f4a3a5d55c415aa21ed3b7bbee25df.jpg",
+      "true_label": "AI-generated",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.42529296875,
+      "correct": false
+    }
+  ],
+  "human_results": [
+    {
+      "filename": "bb89a4c3a7a24725afa3adeeace2e464.jpg",
+      "path": "train_data/bb89a4c3a7a24725afa3adeeace2e464.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "Face2Face",
+      "confidence": 0.4697265625,
+      "correct": false
+    },
+    {
+      "filename": "59d950979be945de8909b10610b90908.jpg",
+      "path": "train_data/59d950979be945de8909b10610b90908.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.2490234375,
+      "correct": false
+    },
+    {
+      "filename": "f00751b35b3649eca6aaaf5eb2790cc2.jpg",
+      "path": "train_data/f00751b35b3649eca6aaaf5eb2790cc2.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.317138671875,
+      "correct": false
+    },
+    {
+      "filename": "8fd4aab1ea0549cdba13888473c9e580.jpg",
+      "path": "train_data/8fd4aab1ea0549cdba13888473c9e580.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.30517578125,
+      "correct": false
+    },
+    {
+      "filename": "6ddac53cb1dd4609bf5078c0ef3b4e5a.jpg",
+      "path": "train_data/6ddac53cb1dd4609bf5078c0ef3b4e5a.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.9873046875,
+      "correct": false
+    },
+    {
+      "filename": "85680d36c3a6421aa983979eb4010a82.jpg",
+      "path": "train_data/85680d36c3a6421aa983979eb4010a82.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.2100830078125,
+      "correct": false
+    },
+    {
+      "filename": "3012b22319d74d608ccdc76db75bc7d7.jpg",
+      "path": "train_data/3012b22319d74d608ccdc76db75bc7d7.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.453369140625,
+      "correct": false
+    },
+    {
+      "filename": "3c12730e40cc496dbc15360d9324cb02.jpg",
+      "path": "train_data/3c12730e40cc496dbc15360d9324cb02.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "Deepfakes",
+      "confidence": 0.309814453125,
+      "correct": false
+    },
+    {
+      "filename": "3a70dbf486964ea68ac4d3f5321902d5.jpg",
+      "path": "train_data/3a70dbf486964ea68ac4d3f5321902d5.jpg",
+      "true_label": "Human/Real",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.282470703125,
+      "correct": true
+    },
+    {
+      "filename": "087d677a440c4e61b5d7b8a94cfdea47.jpg",
+      "path": "train_data/087d677a440c4e61b5d7b8a94cfdea47.jpg",
+      "true_label": "Human/Real",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.47802734375,
+      "correct": true
+    },
+    {
+      "filename": "0d52710f70a341abb5456e92f5dd9954.jpg",
+      "path": "train_data/0d52710f70a341abb5456e92f5dd9954.jpg",
+      "true_label": "Human/Real",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.50927734375,
+      "correct": true
+    },
+    {
+      "filename": "f8dc6e057bbb46dfbec07d2e9316c0ed.jpg",
+      "path": "train_data/f8dc6e057bbb46dfbec07d2e9316c0ed.jpg",
+      "true_label": "Human/Real",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.253173828125,
+      "correct": true
+    },
+    {
+      "filename": "05ada8b45571451fa69cbf3cbe733c3b.jpg",
+      "path": "train_data/05ada8b45571451fa69cbf3cbe733c3b.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.52294921875,
+      "correct": false
+    },
+    {
+      "filename": "6196a56d45064b8ea88a4fd5706ffd76.jpg",
+      "path": "train_data/6196a56d45064b8ea88a4fd5706ffd76.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.24072265625,
+      "correct": false
+    },
+    {
+      "filename": "2fd372b009ed4ef783095c99b3756230.jpg",
+      "path": "train_data/2fd372b009ed4ef783095c99b3756230.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "Face2Face",
+      "confidence": 0.30078125,
+      "correct": false
+    },
+    {
+      "filename": "d60273eb9e684318a373b7917548ff1f.jpg",
+      "path": "train_data/d60273eb9e684318a373b7917548ff1f.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.298828125,
+      "correct": false
+    },
+    {
+      "filename": "bca9d2d2eb124eb4b6ccf0f8e38c5f32.jpg",
+      "path": "train_data/bca9d2d2eb124eb4b6ccf0f8e38c5f32.jpg",
+      "true_label": "Human/Real",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.71533203125,
+      "correct": true
+    },
+    {
+      "filename": "c2ad7538a8f049748ddb2f709027f290.jpg",
+      "path": "train_data/c2ad7538a8f049748ddb2f709027f290.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.77001953125,
+      "correct": false
+    },
+    {
+      "filename": "343052e5809342e98904b691fe59f678.jpg",
+      "path": "train_data/343052e5809342e98904b691fe59f678.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.78515625,
+      "correct": false
+    },
+    {
+      "filename": "04f49cd23b834b6ab2be2797309a144a.jpg",
+      "path": "train_data/04f49cd23b834b6ab2be2797309a144a.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceShifter",
+      "confidence": 0.3359375,
+      "correct": false
+    },
+    {
+      "filename": "6e7608cabc704b96ae18ab0ae9f5cdac.jpg",
+      "path": "train_data/6e7608cabc704b96ae18ab0ae9f5cdac.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.57373046875,
+      "correct": false
+    },
+    {
+      "filename": "9c951f8a1ee44ec9a5fc67f44a8ce251.jpg",
+      "path": "train_data/9c951f8a1ee44ec9a5fc67f44a8ce251.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "Face2Face",
+      "confidence": 0.98779296875,
+      "correct": false
+    },
+    {
+      "filename": "ffaa6c213a1446a3bd600b679b0cf765.jpg",
+      "path": "train_data/ffaa6c213a1446a3bd600b679b0cf765.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "Face2Face",
+      "confidence": 0.349365234375,
+      "correct": false
+    },
+    {
+      "filename": "eeab477a60fe486c9d40385420beae8f.jpg",
+      "path": "train_data/eeab477a60fe486c9d40385420beae8f.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "Deepfakes",
+      "confidence": 0.450439453125,
+      "correct": false
+    },
+    {
+      "filename": "2ab0b8f41dc94f8390f37121f66144f9.jpg",
+      "path": "train_data/2ab0b8f41dc94f8390f37121f66144f9.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "FaceSwap",
+      "confidence": 0.245361328125,
+      "correct": false
+    },
+    {
+      "filename": "c3b2877262954cab8e001944cd607f82.jpg",
+      "path": "train_data/c3b2877262954cab8e001944cd607f82.jpg",
+      "true_label": "Human/Real",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.65283203125,
+      "correct": true
+    },
+    {
+      "filename": "8592fefaad15491388739e41435f05b2.jpg",
+      "path": "train_data/8592fefaad15491388739e41435f05b2.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "NeuralTextures",
+      "confidence": 0.2344970703125,
+      "correct": false
+    },
+    {
+      "filename": "d6e5e334aa934520af189a21d7d53849.jpg",
+      "path": "train_data/d6e5e334aa934520af189a21d7d53849.jpg",
+      "true_label": "Human/Real",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.2880859375,
+      "correct": true
+    },
+    {
+      "filename": "8061e06784b94264a3e0052e5858b254.jpg",
+      "path": "train_data/8061e06784b94264a3e0052e5858b254.jpg",
+      "true_label": "Human/Real",
+      "verdict": "AUTHENTIC",
+      "pred_class": "Original",
+      "confidence": 0.404296875,
+      "correct": true
+    },
+    {
+      "filename": "6925634e888e498eb04b455bd14aa6d6.jpg",
+      "path": "train_data/6925634e888e498eb04b455bd14aa6d6.jpg",
+      "true_label": "Human/Real",
+      "verdict": "MANIPULATED",
+      "pred_class": "Face2Face",
+      "confidence": 0.541015625,
+      "correct": false
+    }
+  ]
+}

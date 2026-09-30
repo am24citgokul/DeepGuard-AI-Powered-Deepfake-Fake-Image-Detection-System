@@ -1,0 +1,52 @@
+<!-- Audio Upload Component with Drag & Drop Preview -->
+<div class="dg-dropzone relative p-6 text-center cursor-pointer transition-all duration-200">
+  <input
+    type="file"
+    id="{{ input_id or 'audio_file' }}"
+    name="{{ input_name or 'audio_file' }}"
+    accept=".wav,.mp3,.flac,.m4a,.aac"
+    class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+    {% if required %}required{% endif %}
+  />
+
+  <!-- Placeholder State -->
+  <div class="upload-placeholder flex flex-col items-center justify-center py-6">
+    <div class="h-14 w-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-3 shadow-inner">
+      <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+        <line x1="12" x2="12" y1="19" y2="22"/>
+      </svg>
+    </div>
+    <p class="text-sm font-bold text-white mb-1">
+      Drop your audio here, or <span class="text-amber-400 underline decoration-amber-400/40">Browse Files</span>
+    </p>
+    <p class="text-xs text-gray-400">
+      Supports WAV, MP3, FLAC, M4A (16 kHz feature analysis)
+    </p>
+  </div>
+
+  <!-- Preview State (Shown when file is selected) -->
+  <div class="file-preview-area hidden flex flex-col items-center justify-center py-2 z-20 relative">
+    <div class="h-16 w-16 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-3">
+      <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+      </svg>
+    </div>
+    
+    <div class="flex items-center gap-3 bg-gray-800/80 px-4 py-2 rounded-lg border border-gray-700">
+      <div class="text-left">
+        <p class="file-name-display text-xs font-semibold text-white truncate max-w-[200px]">audio.wav</p>
+        <p class="file-size-display text-[10px] text-gray-400 font-mono">0 KB</p>
+      </div>
+      <button type="button" class="btn-remove-file text-gray-400 hover:text-rose-400 p-1 transition-colors" title="Remove File">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

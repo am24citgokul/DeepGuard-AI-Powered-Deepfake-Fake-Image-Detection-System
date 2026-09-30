@@ -1,0 +1,42 @@
+<!-- Modality Evidence Panel for Screenings -->
+<div class="rounded-xl border border-gray-800 bg-gray-900/80 p-6 space-y-4">
+  <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+    <h3 class="text-sm font-bold uppercase tracking-wider text-white flex items-center gap-2">
+      <svg class="h-4 w-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M2 12h20M12 2v20"/>
+      </svg>
+      Extracted Evidence Breakdown
+    </h3>
+    <span class="text-xs font-mono text-gray-400">Forensics Telemetry</span>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+    {% if filename %}
+    <div class="rounded-lg bg-gray-800/40 p-3">
+      <span class="text-gray-400 block mb-1">Source Artifact</span>
+      <span class="font-mono text-gray-200 font-semibold break-all">{{ filename }}</span>
+    </div>
+    {% endif %}
+
+    {% if result and result.prediction %}
+    <div class="rounded-lg bg-gray-800/40 p-3">
+      <span class="text-gray-400 block mb-1">Class Prediction</span>
+      <span class="font-mono text-cyan-400 font-bold">{{ result.prediction }}</span>
+    </div>
+    {% endif %}
+
+    {% if method_used %}
+    <div class="rounded-lg bg-gray-800/40 p-3">
+      <span class="text-gray-400 block mb-1">Inference Engine</span>
+      <span class="font-mono text-blue-400 font-semibold">{{ method_used }}</span>
+    </div>
+    {% endif %}
+
+    {% if result and result.ela_mean_diff is defined %}
+    <div class="rounded-lg bg-gray-800/40 p-3">
+      <span class="text-gray-400 block mb-1">ELA Mean Error Difference</span>
+      <span class="font-mono text-gray-200 font-semibold">{{ "%.4f"|format(result.ela_mean_diff) }}</span>
+    </div>
+    {% endif %}
+  </div>
+</div>

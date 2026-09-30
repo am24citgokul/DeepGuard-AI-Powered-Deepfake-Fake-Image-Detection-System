@@ -1,0 +1,16 @@
+Modality,Dataset Benchmark,Split,Real Count,Fake Count,Total Count,Class Balance,Leakage Status
+IMAGE,mix_v2 (FF++ C23 + Celeb-DF v2),TRAIN,10500,10500,21000,50.0% : 50.0%,Zero overlap with val/test (Group & pHash verified)
+IMAGE,mix_v2 (FF++ C23 + Celeb-DF v2),VALIDATION,2254,2250,4504,50.0% : 50.0%,Zero overlap with train/test (Group & pHash verified)
+IMAGE,mix_v2 (FF++ C23 + Celeb-DF v2),TEST (IN-DIST),2004,2000,4004,50.0% : 50.0%,FROZEN — Evaluated once after model freeze
+IMAGE,RVF5K (Held-Out External),OOD TEST,2500,2500,5000,50.0% : 50.0%,Completely disjoint generation paradigm (StyleGAN vs Video Face Swaps)
+IMAGE,FaceForensics++ C23 (Legacy 6-Class),TRAIN,3500,17500,21000,16.7% : 83.3%,Zero video group ID overlap with val/test
+IMAGE,FaceForensics++ C23 (Legacy 6-Class),VALIDATION,750,3750,4500,16.7% : 83.3%,Zero video group ID overlap with train/test
+IMAGE,FaceForensics++ C23 (Legacy 6-Class),TEST,750,3750,4500,16.7% : 83.3%,FROZEN — Evaluated once after model freeze
+VIDEO,FakeAVCeleb Benchmark,TRAIN,NOT APPLICABLE (Pretrained External),NOT APPLICABLE (Pretrained External),NOT APPLICABLE,External Training Set,Pre-trained checkpoint evaluated zero-shot
+VIDEO,FakeAVCeleb Benchmark,VALIDATION,NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE,Validation split not maintained for frozen external checkpoint
+VIDEO,FakeAVCeleb Benchmark,TEST (FROZEN),25,25,50,50.0% : 50.0%,"Zero overlap; 25 Real (VoxCeleb Category A) vs 25 Fake (Faceswap, FSGAN, Wav2Lip)"
+VIDEO,Video OOD Benchmark,OOD TEST,NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE
+AUDIO,In-the-Wild Audio Dataset,TRAIN,8276,8276,16552,50.0% : 50.0%,Zero overlap with val or test (Speaker disjointness verified)
+AUDIO,In-the-Wild Audio Dataset,VALIDATION,1770,1770,3540,50.0% : 50.0%,Dedicated threshold calibration split (Zero test overlap)
+AUDIO,In-the-Wild Audio Dataset,TEST (FROZEN),1770,1770,3540,50.0% : 50.0%,FROZEN — Evaluated ONCE after model freeze
+AUDIO,Audio OOD Benchmark,OOD TEST,NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE

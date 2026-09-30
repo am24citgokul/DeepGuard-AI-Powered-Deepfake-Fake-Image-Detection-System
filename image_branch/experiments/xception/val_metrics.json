@@ -1,0 +1,37 @@
+{
+  "model": "xception",
+  "checkpoint": "E:\\ADL_PROJECT\\image_branch\\experiments\\xception\\best_model.pth",
+  "best_val_auc": 0.9119998028196786,
+  "selected_threshold_from_val": 0.44000000000000006,
+  "metrics_at_selected_threshold": {
+    "threshold": 0.44000000000000006,
+    "accuracy": 0.7977353463587922,
+    "precision": 0.7315807679003805,
+    "real_recall": 0.6557231588287489,
+    "fake_recall": 0.94,
+    "specificity": 0.6557231588287489,
+    "fpr": 0.3442768411712511,
+    "fnr": 0.06,
+    "f1": 0.8227971211826492,
+    "roc_auc": 0.9119998028196786,
+    "pr_auc": 0.916228520607951,
+    "brier": 0.12237548828125,
+    "ece": 0.04430935861374091,
+    "confusion_matrix": {
+      "tn": 1478,
+      "fp": 776,
+      "fn": 135,
+      "tp": 2115,
+      "raw": [
+        [
+          1478,
+          776
+        ],
+        [
+          135,
+          2115
+        ]
+      ]
+    }
+  }
+}

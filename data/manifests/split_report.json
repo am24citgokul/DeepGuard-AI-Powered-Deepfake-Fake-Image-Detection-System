@@ -1,0 +1,63 @@
+{
+  "total_unique_group_ids": 1000,
+  "train_group_ids_count": 700,
+  "val_group_ids_count": 150,
+  "test_group_ids_count": 150,
+  "train_image_count": 21000,
+  "val_image_count": 4500,
+  "test_image_count": 4500,
+  "total_images": 30000,
+  "zero_group_id_overlap": true,
+  "class_distribution": {
+    "train": {
+      "FaceSwap": 3500,
+      "FaceShifter": 3500,
+      "Face2Face": 3500,
+      "Deepfakes": 3500,
+      "Original": 3500,
+      "NeuralTextures": 3500
+    },
+    "val": {
+      "FaceSwap": 750,
+      "FaceShifter": 750,
+      "Face2Face": 750,
+      "Deepfakes": 750,
+      "Original": 750,
+      "NeuralTextures": 750
+    },
+    "test": {
+      "FaceSwap": 750,
+      "FaceShifter": 750,
+      "Face2Face": 750,
+      "Deepfakes": 750,
+      "Original": 750,
+      "NeuralTextures": 750
+    }
+  },
+  "label_id_distribution": {
+    "train": {
+      "1": 3500,
+      "5": 3500,
+      "3": 3500,
+      "2": 3500,
+      "0": 3500,
+      "4": 3500
+    },
+    "val": {
+      "1": 750,
+      "5": 750,
+      "3": 750,
+      "2": 750,
+      "0": 750,
+      "4": 750
+    },
+    "test": {
+      "1": 750,
+      "5": 750,
+      "3": 750,
+      "2": 750,
+      "0": 750,
+      "4": 750
+    }
+  }
+}

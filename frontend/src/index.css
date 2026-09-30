@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-app: #F7F8FC;
+    --card-surface: #FFFFFF;
+    --border-subtle: #E2E8F0;
+    
+    /* Modality colors */
+    --modality-image: #3B82F6;
+    --modality-video: #14B8A6;
+    --modality-audio: #EC4899;
+    --modality-fusion: #8B5CF6;
+    
+    /* Verdict colors */
+    --verdict-trusted: #16A34A;
+    --verdict-review: #F59E0B;
+    --verdict-risk: #DC2626;
+    --verdict-uncertain: #64748B;
+  }
+
+  .dark {
+    --bg-app: #0B0F19;
+    --card-surface: #131B2E;
+    --border-subtle: #1E293B;
+  }
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-app);
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+code, kbd, samp, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Diagonal hatch pattern for UNCERTAIN verdict */
+.uncertain-hatch {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(100, 116, 139, 0.12),
+    rgba(100, 116, 139, 0.12) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+.dark .uncertain-hatch {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(148, 163, 184, 0.16),
+    rgba(148, 163, 184, 0.16) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* Animated flow lines */
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+.animate-flow-dash {
+  stroke-dasharray: 6 6;
+  animation: flowDash 1.2s linear infinite;
+}
+
+/* Soft low-saturation banner gradient */
+.header-gradient-banner {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.08) 0%,
+    rgba(139, 92, 246, 0.08) 50%,
+    rgba(20, 184, 166, 0.08) 100%
+  );
+}
+
+.dark .header-gradient-banner {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(139, 92, 246, 0.14) 50%,
+    rgba(20, 184, 166, 0.12) 100%
+  );
+}
+
+/* Custom scrollbar for data tables and strips */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}

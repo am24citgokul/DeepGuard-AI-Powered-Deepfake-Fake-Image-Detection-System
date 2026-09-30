@@ -1,0 +1,160 @@
+# DeepGuard X — Phase 3 Preprocessing Verification Report
+
+## Verification Checklist
+
+| Criterion | Implementation Specification | Status |
+|---|---|---|
+| **RGB / BGR Handling** | Strict RGB format via `PIL.Image.open().convert("RGB")`. No BGR inverted channels. | **VERIFIED** |
+| **Face Detection** | Haar Cascade frontal face detection on large video frames. | **VERIFIED** |
+| **Face Crop & Margin** | 15% bounding box margin expansion around detected face. | **VERIFIED** |
+| **Fallback when No Face** | Graceful fallback to centered frame resizing without dropping samples. | **VERIFIED** |
+| **Pre-cropped Handling** | Tight face crops (<= 300px) bypass redundant cascade detector. | **VERIFIED** |
+| **Resize Method** | Albumentations `A.Resize(224, 224)` with bilinear interpolation. | **VERIFIED** |
+| **Normalization** | Channel-wise ImageNet standard: mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]. | **VERIFIED** |
+| **Image Size** | Uniform 224×224 spatial dimensions across all candidate architectures. | **VERIFIED** |
+| **Augmentation (Train Only)** | Horizontal flip (0.5), mild compression (0.3), blur (0.2), brightness/contrast (0.4). | **VERIFIED** |
+| **Eval Determinism** | Strictly deterministic: No random flips, noise, or drops during eval/test/OOD. | **VERIFIED** |
+| **Grayscale Handling** | Grayscale single-channel converted to 3-channel RGB before tensorization. | **VERIFIED** |
+| **JPEG Handling** | Preserves high-frequency color artifacts without re-encoding compression loss. | **VERIFIED** |
+
+## Sample Evaluation Run
+
+```json
+[
+  {
+    "split": "train",
+    "source": "FF++",
+    "filepath": "E:\\ADL_PROJECT\\data\\raw\\FF++C32-Frames\\Face2Face\\221_206_f1.jpg",
+    "original_shape": [
+      720,
+      1280,
+      3
+    ],
+    "face_detected": true,
+    "cropped_shape": [
+      153,
+      114,
+      3
+    ],
+    "final_tensor_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "channel_means": [
+      -0.05277082696557045,
+      -0.5168408155441284,
+      -0.514750063419342
+    ],
+    "channel_stds": [
+      1.2564529180526733,
+      0.9494121670722961,
+      0.7331581115722656
+    ],
+    "identical_pipeline_verified": true
+  },
+  {
+    "split": "val",
+    "source": "Celeb-DF",
+    "filepath": "E:\\DEEPFAKE\\archive(3)\\Celeb_V2\\Train\\real\\id25_0004_face_8711.jpg",
+    "original_shape": [
+      256,
+      256,
+      3
+    ],
+    "face_detected": true,
+    "cropped_shape": [
+      256,
+      256,
+      3
+    ],
+    "final_tensor_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "channel_means": [
+      0.0495544970035553,
+      -0.1672537624835968,
+      -0.4672873318195343
+    ],
+    "channel_stds": [
+      0.7835771441459656,
+      0.7453133463859558,
+      0.604719877243042
+    ],
+    "identical_pipeline_verified": true
+  },
+  {
+    "split": "test",
+    "source": "FF++",
+    "filepath": "E:\\ADL_PROJECT\\data\\raw\\FF++C32-Frames\\Original\\062_f0.jpg",
+    "original_shape": [
+      480,
+      640,
+      3
+    ],
+    "face_detected": true,
+    "cropped_shape": [
+      135,
+      105,
+      3
+    ],
+    "final_tensor_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "channel_means": [
+      0.37563130259513855,
+      -0.06848588585853577,
+      -0.15751376748085022
+    ],
+    "channel_stds": [
+      0.886111855506897,
+      0.6707568168640137,
+      0.5830816030502319
+    ],
+    "identical_pipeline_verified": true
+  },
+  {
+    "split": "ood",
+    "source": "RVF5K",
+    "filepath": "E:\\DEEPFAKE\\archive (2)\\rvf5k\\train\\real\\53116.jpg",
+    "original_shape": [
+      256,
+      256,
+      3
+    ],
+    "face_detected": true,
+    "cropped_shape": [
+      256,
+      256,
+      3
+    ],
+    "final_tensor_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "channel_means": [
+      -0.13092811405658722,
+      -0.20636190474033356,
+      -0.10320176929235458
+    ],
+    "channel_stds": [
+      0.9006860256195068,
+      0.7417246699333191,
+      0.6947265863418579
+    ],
+    "identical_pipeline_verified": true
+  }
+]
+```
+
+## Visual Verification Artifact
+Saved visual side-by-side artifact: `image_branch/experiments/reports/preprocessing_verification.png`

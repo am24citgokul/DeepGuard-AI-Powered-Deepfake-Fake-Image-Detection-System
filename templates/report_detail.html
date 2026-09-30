@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}Report Detail — DeepGuard X{% endblock %}
+{% block breadcrumb %}Evidence / Report Detail{% endblock %}
+{% block header_title %}Forensic Report Dossier{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+
+  <!-- Header -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+    <div>
+      <a href="/reports" class="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:underline mb-2 font-semibold">
+        &larr; Back to Screening Reports
+      </a>
+      <h2 class="text-2xl font-black tracking-tight text-white">
+        Forensic Report Dossier
+      </h2>
+    </div>
+
+    <div>
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-400 border border-cyan-500/20">
+        Audited Screening Record
+      </span>
+    </div>
+  </div>
+
+  {% if report %}
+  <div class="dg-glass-card rounded-2xl p-6 sm:p-8 border border-gray-800 bg-gray-900/90 space-y-6">
+    <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+      <div>
+        <span class="text-[10px] font-mono uppercase text-gray-400">ARTIFACT RECORD</span>
+        <h3 class="text-lg font-bold text-white mt-0.5">{{ report.filename }}</h3>
+      </div>
+      <span class="text-xs font-mono text-cyan-400">{{ report.timestamp }}</span>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="text-gray-400 block mb-1">Modality</span>
+        <span class="font-bold text-white">{{ report.type }}</span>
+      </div>
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="text-gray-400 block mb-1">Prediction</span>
+        <span class="font-bold text-cyan-400">{{ report.prediction }}</span>
+      </div>
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="text-gray-400 block mb-1">Confidence</span>
+        <span class="font-bold font-mono text-white">{{ report.confidence }}</span>
+      </div>
+      <div class="rounded-xl bg-gray-800/40 p-4 border border-gray-800">
+        <span class="text-gray-400 block mb-1">Risk Assessment</span>
+        <span class="font-bold text-emerald-400">{{ report.risk }}</span>
+      </div>
+    </div>
+
+    {% if report.url %}
+    <div class="pt-4 border-t border-gray-800 space-y-3">
+      <div class="flex items-center justify-between">
+        <h4 class="text-sm font-bold text-white uppercase">Generated Evidence Image</h4>
+        <a href="{{ report.url }}" target="_blank" class="text-xs text-cyan-400 hover:underline">Open Full Res &rarr;</a>
+      </div>
+      <div class="rounded-xl overflow-hidden border border-gray-800 bg-black/60 p-2">
+        <img src="{{ report.url }}" alt="Report Preview" class="w-full h-auto rounded-lg object-contain max-h-[600px] mx-auto" />
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% else %}
+  <div class="p-12 text-center dg-glass-card rounded-2xl border border-gray-800 bg-gray-900/60">
+    <p class="text-sm text-gray-400">Report details not found or expired.</p>
+    <a href="/reports" class="mt-4 inline-block text-xs font-bold text-cyan-400 hover:underline">Return to Reports</a>
+  </div>
+  {% endif %}
+
+</div>
+{% endblock %}

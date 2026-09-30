@@ -1,0 +1,29 @@
+Metric,Value,Model,Checkpoint,Dataset,Split,Samples,Evaluation Script,Timestamp
+Test Accuracy,77.97%,Xception,image_branch/experiments/xception/best_model.pth,mix_v2,test_indist,4004,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+Test Precision,71.78%,Xception,image_branch/experiments/xception/best_model.pth,mix_v2,test_indist,4004,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+Fake Recall,92.10%,Xception,image_branch/experiments/xception/best_model.pth,mix_v2,test_indist,4004,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+Real Recall,63.87%,Xception,image_branch/experiments/xception/best_model.pth,mix_v2,test_indist,4004,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+Test F1,0.8068,Xception,image_branch/experiments/xception/best_model.pth,mix_v2,test_indist,4004,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+ROC-AUC,0.9084,Xception,image_branch/experiments/xception/best_model.pth,mix_v2,test_indist,4004,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+PR-AUC,0.9157,Xception,image_branch/experiments/xception/best_model.pth,mix_v2,test_indist,4004,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+OOD Accuracy,90.68%,Xception,image_branch/experiments/xception/best_model.pth,RVF5K,held_out_ood,5000,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+OOD Fake Recall,97.88%,Xception,image_branch/experiments/xception/best_model.pth,RVF5K,held_out_ood,5000,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+OOD Real Recall,83.48%,Xception,image_branch/experiments/xception/best_model.pth,RVF5K,held_out_ood,5000,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+OOD F1,0.9131,Xception,image_branch/experiments/xception/best_model.pth,RVF5K,held_out_ood,5000,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+OOD ROC-AUC,0.9821,Xception,image_branch/experiments/xception/best_model.pth,RVF5K,held_out_ood,5000,image_branch/experiments/evaluate_all.py,2026-09-28 18:45:00
+Test Accuracy,98.47%,Baseline Log-Mel CNN,checkpoints/audio/baseline_cnn_best.pt,In-the-Wild Audio,audio_test.csv,3540,audio_branch/evaluation/evaluate_audio.py,2026-09-27 16:20:00
+Test Precision,99.42%,Baseline Log-Mel CNN,checkpoints/audio/baseline_cnn_best.pt,In-the-Wild Audio,audio_test.csv,3540,audio_branch/evaluation/evaluate_audio.py,2026-09-27 16:20:00
+Fake Recall,97.51%,Baseline Log-Mel CNN,checkpoints/audio/baseline_cnn_best.pt,In-the-Wild Audio,audio_test.csv,3540,audio_branch/evaluation/evaluate_audio.py,2026-09-27 16:20:00
+Real Recall,99.44%,Baseline Log-Mel CNN,checkpoints/audio/baseline_cnn_best.pt,In-the-Wild Audio,audio_test.csv,3540,audio_branch/evaluation/evaluate_audio.py,2026-09-27 16:20:00
+Test F1,0.9846,Baseline Log-Mel CNN,checkpoints/audio/baseline_cnn_best.pt,In-the-Wild Audio,audio_test.csv,3540,audio_branch/evaluation/evaluate_audio.py,2026-09-27 16:20:00
+ROC-AUC,0.9965,Baseline Log-Mel CNN,checkpoints/audio/baseline_cnn_best.pt,In-the-Wild Audio,audio_test.csv,3540,audio_branch/evaluation/evaluate_audio.py,2026-09-27 16:20:00
+PR-AUC,0.9974,Baseline Log-Mel CNN,checkpoints/audio/baseline_cnn_best.pt,In-the-Wild Audio,audio_test.csv,3540,audio_branch/evaluation/evaluate_audio.py,2026-09-27 16:20:00
+Brier Score,0.0152,Baseline Log-Mel CNN,checkpoints/audio/baseline_cnn_best.pt,In-the-Wild Audio,audio_test.csv,3540,audio_branch/evaluation/evaluate_audio.py,2026-09-27 16:20:00
+ECE,0.0079,Baseline Log-Mel CNN,checkpoints/audio/baseline_cnn_best.pt,In-the-Wild Audio,audio_test.csv,3540,audio_branch/evaluation/evaluate_audio.py,2026-09-27 16:20:00
+Test Accuracy,54.00%,CNN-GRU Temporal Model,video_branch/external_model/deepfake_video_model.h5,FakeAVCeleb,frozen_benchmark,50,evaluate_frozen_video.py,2026-09-29 19:34:00
+Test Precision,62.50%,CNN-GRU Temporal Model,video_branch/external_model/deepfake_video_model.h5,FakeAVCeleb,frozen_benchmark,50,evaluate_frozen_video.py,2026-09-29 19:34:00
+Fake Recall,20.00%,CNN-GRU Temporal Model,video_branch/external_model/deepfake_video_model.h5,FakeAVCeleb,frozen_benchmark,50,evaluate_frozen_video.py,2026-09-29 19:34:00
+Real Recall,88.00%,CNN-GRU Temporal Model,video_branch/external_model/deepfake_video_model.h5,FakeAVCeleb,frozen_benchmark,50,evaluate_frozen_video.py,2026-09-29 19:34:00
+Test F1,0.3030,CNN-GRU Temporal Model,video_branch/external_model/deepfake_video_model.h5,FakeAVCeleb,frozen_benchmark,50,evaluate_frozen_video.py,2026-09-29 19:34:00
+ROC-AUC,0.5232,CNN-GRU Temporal Model,video_branch/external_model/deepfake_video_model.h5,FakeAVCeleb,frozen_benchmark,50,evaluate_frozen_video.py,2026-09-29 19:34:00
+PR-AUC,0.5281,CNN-GRU Temporal Model,video_branch/external_model/deepfake_video_model.h5,FakeAVCeleb,frozen_benchmark,50,evaluate_frozen_video.py,2026-09-29 19:34:00

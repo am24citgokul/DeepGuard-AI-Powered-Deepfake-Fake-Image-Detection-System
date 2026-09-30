@@ -1,0 +1,46 @@
+[
+  {
+    "case_id": "true_real",
+    "description": "TRUE REAL (Correct Authentic)",
+    "filepath": "E:\\DEEPFAKE\\archive (1)\\Final Dataset\\Real\\real_493_aug_3.jpg",
+    "true_label": 0,
+    "predicted_label": 0,
+    "real_probability": 1.0,
+    "fake_probability": 3.218650817871094e-05,
+    "gradcampp_image": "E:\\ADL_PROJECT\\image_branch\\experiments\\reports\\explainability\\true_real_xception_gradcampp.png",
+    "vit_attention_image": "E:\\ADL_PROJECT\\image_branch\\experiments\\reports\\explainability\\true_real_vit_attention.png"
+  },
+  {
+    "case_id": "true_fake",
+    "description": "TRUE FAKE (Correct Deepfake Detected)",
+    "filepath": "E:\\DEEPFAKE\\archive (1)\\Final Dataset\\Fake\\2A3XQB3TFK.jpg",
+    "true_label": 1,
+    "predicted_label": 1,
+    "real_probability": 6.759166717529297e-05,
+    "fake_probability": 1.0,
+    "gradcampp_image": "E:\\ADL_PROJECT\\image_branch\\experiments\\reports\\explainability\\true_fake_xception_gradcampp.png",
+    "vit_attention_image": "E:\\ADL_PROJECT\\image_branch\\experiments\\reports\\explainability\\true_fake_vit_attention.png"
+  },
+  {
+    "case_id": "false_negative",
+    "description": "FALSE NEGATIVE (Deepfake Predicted as REAL \u2014 Failure Case)",
+    "filepath": "E:\\DEEPFAKE\\archive(3)\\Celeb_V2\\Train\\fake\\id35_id2_0008_face_27914.jpg",
+    "true_label": 1,
+    "predicted_label": 0,
+    "real_probability": 0.98291015625,
+    "fake_probability": 0.0171966552734375,
+    "gradcampp_image": "E:\\ADL_PROJECT\\image_branch\\experiments\\reports\\explainability\\false_negative_xception_gradcampp.png",
+    "vit_attention_image": "E:\\ADL_PROJECT\\image_branch\\experiments\\reports\\explainability\\false_negative_vit_attention.png"
+  },
+  {
+    "case_id": "false_positive",
+    "description": "FALSE POSITIVE (Authentic Predicted as FAKE)",
+    "filepath": "E:\\DEEPFAKE\\archive(3)\\Celeb_V2\\Train\\real\\id40_0005_face_18400.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "real_probability": 0.0013751983642578,
+    "fake_probability": 0.99853515625,
+    "gradcampp_image": "E:\\ADL_PROJECT\\image_branch\\experiments\\reports\\explainability\\false_positive_xception_gradcampp.png",
+    "vit_attention_image": "E:\\ADL_PROJECT\\image_branch\\experiments\\reports\\explainability\\false_positive_vit_attention.png"
+  }
+]

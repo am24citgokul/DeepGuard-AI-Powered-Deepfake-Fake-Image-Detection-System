@@ -1,0 +1,8 @@
+Modality,Model,Brier Score,ECE,Optimal Threshold,Calibration Quality
+AUDIO,Baseline Log-Mel CNN,0.0152,0.0079,0.3,EXCELLENT (< 1% calibration error; sharp probabilistic confidence)
+AUDIO,AASIST,0.1742,0.1654,0.5,POOR (Underconfident real probabilities; over-predicts synthetic class)
+IMAGE,Xception (mix_v2),0.1232,0.0335,0.44,HIGH (3.35% ECE discrepancy)
+IMAGE,Xception (OOD RVF5K),0.0642,0.0655,0.44,VERY HIGH (6.55% ECE discrepancy)
+IMAGE,Vision Transformer (ViT-B/16),0.1363,0.0337,0.3,HIGH (3.37% ECE discrepancy)
+IMAGE,EfficientNet-B0 (mix_v2),0.1898,0.1351,0.2,MODERATE (13.51% ECE discrepancy)
+VIDEO,CNN-GRU Temporal Model,0.2705,0.1341,0.5,MODERATE (13.41% ECE discrepancy under zero-shot domain shift)
